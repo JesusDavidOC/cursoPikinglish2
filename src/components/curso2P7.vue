@@ -44,7 +44,7 @@
     </b-row>
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="9">
+      <b-col sm="10">
         <tablaTC :cuestionario="tabla3P7" />
       </b-col>
     </b-row>
@@ -74,6 +74,56 @@ export default {
             a: "They deny the truth",
             b: "Ellos niegan la verdad ",
             complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18, resuelto: true},
+          },
+          {
+            a: "We have to pay the bill",
+            b: "Tenemos que pagar la cuenta",
+            complejo1: {lista:["has"], conTexto: true, textoA: "He", textoD: "to pay the bill", tamano:18},
+          },
+          {
+            a: "They fix cars",
+            b: "Ellos arreglan carros",
+            complejo1: {lista:["fixies"], conTexto: true, textoA: "The mechanic", textoD: "cars", tamano:20},
+          },
+          {
+            a: "I neglect my loved ones",
+            b: "Yo descuido mis seres queridos",
+            complejo1: {lista:["neglects"], conTexto: true, textoA: "She", textoD: "her loved ones", tamano:22},
+          },
+          {
+            a: "We miss you",
+            b: "Nosotros te extrañamos",
+            complejo1: {lista:["misses"], conTexto: true, textoA: "He", textoD: "you", tamano:15},
+          },
+          {
+            a: "I go for a run every morning",
+            b: "Yo voy a correr cada mañana",
+            complejo1: {lista:["goes"], conTexto: true, textoA: "Karen", textoD: "for a run every morning ", tamano:27},
+          },
+          {
+            a: "They easily dismiss anyone",
+            b: "Ellos despiden a cualquiera fácilmente",
+            complejo1: {lista:["dismisses"], conTexto: true, textoA: "He", textoD: "anyone easily.", tamano:18},
+          },
+          {
+            a: "They deny the truth",
+            b: "Ellos niegan la verdad ",
+            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18},
+          },
+          {
+            a: "They deny the truth",
+            b: "Ellos niegan la verdad ",
+            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18},
+          },
+          {
+            a: "They deny the truth",
+            b: "Ellos niegan la verdad ",
+            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18},
+          },
+          {
+            a: "They deny the truth",
+            b: "Ellos niegan la verdad ",
+            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18},
           },
         ],
       },

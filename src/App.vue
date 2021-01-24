@@ -6,7 +6,7 @@
 
 <script>
 import app from "./assets/app.css";
-import leccion1 from "./components/curso2Leccion1";
+import leccion1 from "./components/curso2P7";
 export default {
   name: "App",
   components: {

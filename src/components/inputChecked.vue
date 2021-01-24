@@ -3,7 +3,7 @@
     <div class="input-group row" :style="'width: '+tamano+'em;'+' margin-left:0;'">
         <div v-if="conTexto" style="margin-right:10px; padding-top:0.2em;">
             <p class="parrafoIC" v-html="textoA">{{textoA}}</p>
-        </div>
+        </div>        
         <b-form-input  style="padding-top:-0.5em;" :name="this.name+esperado[0]" :id="this.name+esperado[0]" v-model="text" :state="this.contiene()" aria-describedby="input-live-help input-live-feedback" trim class="text"></b-form-input>
         <div class="input-group-append">
             <button id="noAudio" v-if="$props.audio == undefined" class="btn btn-outline-secondary" type="button" v-on:click="completar">                
