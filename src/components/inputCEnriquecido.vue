@@ -9,6 +9,7 @@
         :textoA="object.textoA"
         :textoD="object.textoD"
         :tamano="object.tamano1"
+        :audio="object.audio1"
       />
     </b-col>
     <b-col md="auto" style="padding: 0">
@@ -20,6 +21,7 @@
         textoA=""
         :textoD="object.textoD2"
         :tamano="object.tamano2"
+        :audio="object.audio2"
       />
     </b-col>
   </b-row>
