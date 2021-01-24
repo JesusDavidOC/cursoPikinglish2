@@ -44,7 +44,7 @@
     </b-row>
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="10">
+      <b-col sm="11">
         <tablaTC :cuestionario="tabla3P7" />
       </b-col>
     </b-row>
@@ -103,16 +103,16 @@ export default {
           {
             a: "They easily dismiss anyone",
             b: "Ellos despiden a cualquiera fácilmente",
-            complejo1: {lista:["dismisses"], conTexto: true, textoA: "He", textoD: "anyone easily.", tamano:18},
+            complejo1: {lista:["dismisses"], conTexto: true, textoA: "He", textoD: "anyone easily.", tamano:22},
           },
           {
-            a: "They deny the truth",
-            b: "Ellos niegan la verdad ",
-            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18},
+            a: "You know me very well",
+            b: "Tú me conoces muy bien",
+            complejo1: {lista:["knows"], conTexto: true, textoA: "That person", textoD: "me very well ", tamano:18},
           },
           {
-            a: "They deny the truth",
-            b: "Ellos niegan la verdad ",
+            a: "I have something to tell you ",
+            b: "Tengo algo que contarte ",
             complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18},
           },
           {

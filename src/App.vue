@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <leccion1 />
+    <leccion1/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import leccion1 from "./components/curso2P7";
 export default {
   name: "App",
   components: {
-    leccion1,
+    leccion1
   },
 };
 </script>
