@@ -1,16 +1,16 @@
 <template>
-<div style="display: inline-flex;">
-    <div class="input-group row" :style="'width: '+tamano+'em;'">
-        <div v-if="conTexto" style="margin-right:10px; padding-top:0.5em;">
+<b-container style="display: inline-flex;" fluid>
+    <div class="input-group row" :style="'width: '+tamano+'em;'+' margin-left:0;'">
+        <div v-if="conTexto" style="margin-right:10px; padding-top:0.2em;">
             <p class="parrafoIC" v-html="textoA">{{textoA}}</p>
         </div>
         <b-form-input  style="padding-top:-0.5em;" :name="this.name+esperado[0]" :id="this.name+esperado[0]" v-model="text" :state="this.contiene()" aria-describedby="input-live-help input-live-feedback" trim class="text"></b-form-input>
         <div class="input-group-append">
-            <button v-if="$props.audio == undefined" class="btn btn-outline-secondary" type="button" v-on:click="completar">
+            <button id="noAudio" v-if="$props.audio == undefined" class="btn btn-outline-secondary" type="button" v-on:click="completar">                
                 <i class="fa fa-eye"></i>
             </button>
 
-            <button id="paraAudio" v-if="$props.audio != undefined" class="btn btn-outline-secondary" type="button" v-on:click="completar" style="border-radius: 0;">
+            <button id="paraAudio" v-if="$props.audio != undefined" class="btn btn-outline-secondary" type="button" v-on:click="completar" style="border-radius: 0;">                
                 <i class="fa fa-eye"></i>
             </button>
 
@@ -18,11 +18,11 @@
                 <i class="fa fa-play"></i>
             </button>
         </div>
-        <div v-if="conTexto" style="margin-left:10px; padding-top:0.5em;">
+        <div v-if="conTexto" style="margin-left:10px; padding-top:0.3em;">
             <p class="parrafoIC" v-html="textoD">{{textoD}}</p>
         </div>
     </div>
-</div>
+</b-container>
 </template>
 
 <script>
@@ -124,5 +124,16 @@ export default {
     width: 1.2em;
     padding-right: 0;
     padding-left: 0;
+}
+/deep/ .form-control{
+    padding-top:0;
+    padding-bottom: 0;
+    height: 100%;
+    padding-right: 0;
+}
+
+#noAudio{
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
 }
 </style>

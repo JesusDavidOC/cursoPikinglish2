@@ -1,0 +1,113 @@
+<template>
+  <b-container fluid>
+    <b-row>
+      <b-col></b-col>
+      <b-col sm="auto">
+        <h3 class="titulo">PRESENT VERBS WITH THE 3RD SINGULAR PERSON.</h3>
+      </b-col>
+      <b-col></b-col>
+    </b-row>
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          If the phrase is present, affirmative and it is conjugated by she, he
+          and it then the verbs are added the “S, ES, S or Has to have”
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC :cuestionario="tabla1P7" />
+      </b-col>
+    </b-row>
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">Rules to add the S, ES, IES</h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="10">
+        <tablaTC :cuestionario="tabla2P7" />
+      </b-col>
+    </b-row>
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          Rewrite the sentence, change the subject and modify the verb.
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="9">
+        <tablaTC :cuestionario="tabla3P7" />
+      </b-col>
+    </b-row>
+  </b-container>
+</template>
+
+<script>
+import posiblesRespuestasTabla from "./posiblesRespuestasTabla";
+import opcionMultiple from "./opcionMultiple";
+import listaIndex from "./listaIndex";
+import inputChecked from "./inputChecked";
+import tablaTC from "./tablaTraduccionCodigos";
+export default {
+  components: {
+    tablaTC,
+  },
+  data() {
+    return {
+      tabla3P7: {
+        fields: [
+          { key: "a", label: "I, you, we and they + verb" },
+          { key: "b", label: "Spanish translation" },
+          { key: "complejo1", label: "3rd singular person + verb (present)" },
+        ],
+        items: [
+          {
+            a: "They deny the truth",
+            b: "Ellos niegan la verdad ",
+            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18, resuelto: true},
+          },
+        ],
+      },
+      tabla2P7: {
+        fields: [
+          { key: "a", label: "ES" },
+          { key: "b", label: "IES" },
+          { key: "c", label: "S" },
+          { key: "d", label: "HAVE" },
+        ],
+        items: [
+          {
+            a: "Verbs ending in o, x, s, sh, ch, z",
+            b:
+              "If a verb ends with a consonant before -Y, we remove the y and add -IES",
+            c: "Add an “S” to the rest of the verbs",
+            d: "Has",
+          },
+        ],
+      },
+      tabla1P7: {
+        fields: [
+          { key: "a", label: "Present - I, you, they, we" },
+          { key: "b", label: "Present - She, he, it" },
+          { key: "c", label: "Past" },
+          { key: "d", label: "Participle" },
+          { key: "e", label: "Progressive" },
+        ],
+        items: [{ a: "SEE", b: "SEES", c: "Saw", d: "Seen", e: "Seeing" }],
+      },
+    };
+  },
+};
+</script>
+
+<style>
+</style>

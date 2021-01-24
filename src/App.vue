@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    
+    <leccion1 />
   </div>
 </template>
 
 <script>
-
-
+import app from "./assets/app.css";
+import leccion1 from "./components/curso2Leccion1";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-
-  }
-}
+    leccion1,
+  },
+};
 </script>
 
 <style>
@@ -23,5 +23,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  padding-left: 1em;
 }
 </style>
