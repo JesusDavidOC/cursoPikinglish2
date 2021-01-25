@@ -48,20 +48,6 @@
         <tablaTC :cuestionario="tabla3P7" />
       </b-col>
     </b-row>
-    <b-row class="diamondContainer">
-      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
-      <b-col>
-        <h3 class="fuenteDiamond">
-          Rewrite the sentence, change the subject and modify the verb.
-        </h3>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col sm="1"></b-col>
-      <b-col sm="11">
-        <tablaTC :cuestionario="tabla4P7" />
-      </b-col>
-    </b-row>
   </b-container>
 </template>
 
@@ -77,13 +63,6 @@ export default {
   },
   data() {
     return {
-      tabla4P7: {
-        fields: [
-          { key: "a", label: "I, you, we and they + verb", thClass: "noHead" },
-          { key: "b", label: "Spanish translation", thClass: "noHead" },
-        ],
-        items: [{ a: "eyyyyy", b: "ayyyy" }],
-      },
       tabla3P7: {
         bordered: false,
         fields: [
@@ -119,7 +98,7 @@ export default {
             a: "They fix cars",
             b: "Ellos arreglan carros",
             complejo1: {
-              lista: ["fixies"],
+              lista: ["fixes"],
               conTexto: true,
               textoA: "The mechanic",
               textoD: "cars",
@@ -185,33 +164,33 @@ export default {
             a: "I have something to tell you ",
             b: "Tengo algo que contarte ",
             complejo1: {
-              lista: ["ies"],
+              lista: ["has"],
               conTexto: true,
-              textoA: "She den",
-              textoD: "the truth",
-              tamano: 18,
+              textoA: "She",
+              textoD: "something to tell you",
+              tamano: 23,
             },
           },
           {
-            a: "They deny the truth",
-            b: "Ellos niegan la verdad ",
+            a: "I walk every day",
+            b: "Yo camino todos los días",
             complejo1: {
-              lista: ["ies"],
+              lista: ["walks"],
               conTexto: true,
-              textoA: "She den",
-              textoD: "the truth",
-              tamano: 18,
+              textoA: "He",
+              textoD: "every day",
+              tamano: 17,
             },
           },
           {
-            a: "They deny the truth",
-            b: "Ellos niegan la verdad ",
+            a: "You cry a lot",
+            b: "Tú lloras mucho",
             complejo1: {
-              lista: ["ies"],
+              lista: ["cries"],
               conTexto: true,
-              textoA: "She den",
-              textoD: "the truth",
-              tamano: 18,
+              textoA: "She",
+              textoD: "a lot",
+              tamano: 14,
             },
           },
         ],

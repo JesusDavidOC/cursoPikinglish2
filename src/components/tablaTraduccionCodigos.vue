@@ -67,5 +67,9 @@ export default {
     width: 99.9%;
 }
 
+/deep/ th{
+    font-size: 1.5em !important;
+}
+
 
 </style>
