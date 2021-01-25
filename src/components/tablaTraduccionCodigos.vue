@@ -69,6 +69,7 @@ export default {
 
 /deep/ th{
     font-size: 1.5em !important;
+    text-align: center;
 }
 
 
