@@ -18,14 +18,22 @@
     </b-row>
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="auto">
-        <tablaTC :cuestionario="tabla1P8" />
+      <b-col sm="10">
+        <tablaTC id="tabla1P8" :cuestionario="tabla1P8" />
       </b-col>
     </b-row>
     <b-row class="diamondContainer">
       <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
       <b-col>
-        <h3 class="fuenteDiamond">Rules to add the S, ES, IES</h3>
+        <h3 class="fuenteDiamond">
+          Complete with the most suitable verb in the past form.
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="10">
+        <tablaTC id="" :cuestionario="tablaCompleteP8" />
       </b-col>
     </b-row>
     <b-row>
@@ -60,9 +68,68 @@ import tablaTC from "./tablaTraduccionCodigos";
 export default {
   components: {
     tablaTC,
+    opcionMultiple,
   },
   data() {
     return {
+      tablaCompleteP8: {
+        fields: [
+          { key: "a", thClass: "noHead" },
+          { key: "b", thClass: "noHead" },
+          { key: "c", thClass: "noHead" },
+          { key: "d", thClass: "noHead" },
+          { key: "e", thClass: "noHead" },
+          { key: "f", thClass: "noHead" },
+          { key: "g", thClass: "noHead" },
+        ],
+        items:[
+            {a:"Study", b: "Apply", c: "Try", d:"Cry", e:"Reply", f:"Dry", g:"Copy"}
+        ]
+      },
+      tabla1P8: {
+        fields: [
+          {
+            key: "a",
+            label:
+              "Verbs ending in “Y” preceded by a consonant are changed the “Y” to “I” + “ed” ",
+          },
+          { key: "b", label: "Verbs ending in “e” are just added the “d” " },
+          { key: "c", label: "One syllable, double the last consonant" },
+          { key: "d", label: "The rest of the verbs are added “ed” " },
+        ],
+        items: [
+          {
+            a: "Study - studied",
+            b: "Love - loved",
+            c: "Plan - planned",
+            d: "Work - worked",
+          },
+          {
+            a: "Apply - applied",
+            b: "Sue-sued",
+            c: "Mop-mopped",
+            d: "Finish-finished",
+          },
+          {
+            a: "Try-tried",
+            b: "Like-liked",
+            c: "Rub-rubbed",
+            d: "Walk-walked ",
+          },
+          {
+            a: "Cry-cried",
+            b: "Tie-tied",
+            c: "Stop-stopped Sob-sobbed",
+            d: "Cook-cooked",
+          },
+          {
+            a: "Reply- replied",
+            b: "Breathe-breathed ",
+            c: "",
+            d: "Paint-painted",
+          },
+        ],
+      },
       tabla3P7: {
         bordered: false,
         fields: [
@@ -212,20 +279,13 @@ export default {
           },
         ],
       },
-      tabla1P7: {
-        fields: [
-          { key: "a", label: "Verbs ending in “Y” preceded by a consonant are changed the “Y” to “I” + “ed” " },
-          { key: "b", label: "Verbs ending in “e” are just added the “d” " },
-          { key: "c", label: "One syllable, double the last consonant" },
-          { key: "d", label: "The rest of the verbs are added “ed” " },
-          { key: "e", label: "Progressive" },
-        ],
-        items: [{ a: "SEE", b: "SEES", c: "Saw", d: "Seen", e: "Seeing" }],
-      },
     };
   },
 };
 </script>
 
-<style>
+<style scoped>
+/deep/ #tabla1P8 td {
+  text-align: center !important;
+}
 </style>

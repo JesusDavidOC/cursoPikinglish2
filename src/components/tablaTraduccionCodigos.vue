@@ -72,5 +72,9 @@ export default {
     text-align: center;
 }
 
+/deep/ .noHead{
+    font-size: 0em !important;
+}
+
 
 </style>
