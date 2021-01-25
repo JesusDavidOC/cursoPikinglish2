@@ -65,10 +65,17 @@
         <b-col sm="11">
           <h3 class="parrafoIC">
             <br>
-            <b>- </b>Have you been working hard? Yes, I have<br><br>
-            <b>- </b>Were you drinking with her last night? No, I wasn’t<br><br>
-            <b>- </b>Would you like to come with me? Yes, I would<br><br>
+            <b>- </b> <span class="colorLetraRojo">Have</span> you been working hard? Yes, I <span class="colorLetraRojo">have</span><br><br>
+            <b>- </b> <span class="colorLetraRojo">Were</span>you drinking with her last night? No, I <span class="colorLetraRojo"> wasn’t</span><br><br>
+            <b>- </b> <span class="colorLetraRojo">Would</span> you like to come with me? Yes, I  <span class="colorLetraRojo">would</span><br><br>
           </h3>
+        </b-col>
+      </b-row>
+
+    <b-row>
+        <b-col sm="auto"></b-col>
+        <b-col sm="11">
+          <h3 class="subTitulo">LET'S PRACTICE</h3>
         </b-col>
       </b-row>
 
