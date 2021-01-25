@@ -29,7 +29,7 @@ export default {
           { key: "html1", label: "pruebita :3", thClass: "noHead" },
         ],
         items: [
-            {null:"¿Bailamos?",html1:"Shall we dance?"}
+            {null:"¿Bailamos?",html1:"<span>Shall</span> we dance?"}
         ],
       },
     };
