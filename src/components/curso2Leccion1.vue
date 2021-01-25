@@ -68,16 +68,13 @@ export default {
           { key: "a", label: "I, you, we and they + verb" },
           { key: "b", label: "Spanish translation" },
           { key: "complejo1", label: "3rd singular person + verb (present)" },
-          { key: "complejo2", label: "4rd singular person + verb (present)" },
-          
         ],
         items: [
           {
             a: "They deny the truth",
             b: "Ellos niegan la verdad ",
-            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18, resuelto: true},
-            complejo2: {lista:["duban","duvan","dowhile"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:20, resuelto: true},
-          },
+            complejo1: {lista:["ies"], conTexto: true, textoA: "She den", textoD: "the truth", tamano:18, resuelto: false},
+            },
         ],
       },
       tabla2P7: {
