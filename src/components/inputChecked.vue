@@ -101,7 +101,7 @@ export default {
 
 <style scoped>
 .input-group-append {
-    height: 100%;
+    height: 1.95em;
 }
 /deep/ .input-group>.form-control:not(:first-child),
 .input-group>.custom-select:not(:first-child) {
@@ -128,7 +128,7 @@ export default {
 /deep/ .form-control{
     padding-top:0;
     padding-bottom: 0;
-    height: 100%;
+    height: 1.5em;
     padding-right: 0;
 }
 
