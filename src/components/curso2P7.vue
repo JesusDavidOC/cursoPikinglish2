@@ -108,7 +108,7 @@ export default {
           {
             a: "You know me very well",
             b: "Tú me conoces muy bien",
-            complejo1: {lista:["knows"], conTexto: true, textoA: "That person", textoD: "me very well ", tamano:18},
+            complejo1: {lista:["knows"], conTexto: true, textoA: "That person", textoD: "me very well ", tamano:25},
           },
           {
             a: "I have something to tell you ",
