@@ -11,9 +11,11 @@
 }
 
 .noHead {
-    border-width: 0;
     font-size: 0;
-    height: 0.1em;
+    height: 0em;  
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
 }
 
 .subTitulo {

@@ -57,4 +57,15 @@ export default {
 /deep/ td .input-group{
     font-size: 0.8em;
 }
+
+.cuestionario{
+    border-width: 0px;
+}
+
+/deep/ .table-bordered{
+    border: 0px !important;
+    width: 99.9%;
+}
+
+
 </style>
