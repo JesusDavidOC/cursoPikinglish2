@@ -68,8 +68,12 @@ export default {
 }
 
 /deep/ th{
-    font-size: 1.5em !important;
+    font-size: 1.5em !important;    
     text-align: center;
+}
+
+/deep/ .noHead{
+    font-size: 0em !important;
 }
 
 
