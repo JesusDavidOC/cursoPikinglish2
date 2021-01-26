@@ -44,7 +44,7 @@
     </b-row>
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="11">
+      <b-col sm="10">
         <tablaTC :cuestionario="tabla3P7" />
       </b-col>
     </b-row>
@@ -79,7 +79,7 @@ export default {
               conTexto: true,
               textoA: "She den",
               textoD: "the truth",
-              tamano: 18,
+              tamano: 22,
               resuelto: true,
             },
           },
@@ -91,7 +91,7 @@ export default {
               conTexto: true,
               textoA: "He",
               textoD: "to pay the bill",
-              tamano: 18,
+              tamano: 22,
             },
           },
           {
@@ -102,7 +102,7 @@ export default {
               conTexto: true,
               textoA: "The mechanic",
               textoD: "cars",
-              tamano: 20,
+              tamano: 24,
             },
           },
           {
@@ -113,7 +113,7 @@ export default {
               conTexto: true,
               textoA: "She",
               textoD: "her loved ones",
-              tamano: 22,
+              tamano: 26,
             },
           },
           {
@@ -124,7 +124,7 @@ export default {
               conTexto: true,
               textoA: "He",
               textoD: "you",
-              tamano: 15,
+              tamano: 17,
             },
           },
           {
@@ -134,8 +134,9 @@ export default {
               lista: ["goes"],
               conTexto: true,
               textoA: "Karen",
-              textoD: "for a run every morning ",
-              tamano: 27,
+              textoD: "for a run",
+              textoD2: " every morning",
+              tamano: 21,
             },
           },
           {
@@ -146,7 +147,7 @@ export default {
               conTexto: true,
               textoA: "He",
               textoD: "anyone easily.",
-              tamano: 22,
+              tamano: 26,
             },
           },
           {
@@ -156,8 +157,9 @@ export default {
               lista: ["knows"],
               conTexto: true,
               textoA: "That person",
-              textoD: "me very well ",
-              tamano: 25,
+              textoD: "me very ",
+              textoD2: "well",
+              tamano: 26,
             },
           },
           {
@@ -167,8 +169,9 @@ export default {
               lista: ["has"],
               conTexto: true,
               textoA: "She",
-              textoD: "something to tell you",
-              tamano: 23,
+              textoD: "something",
+              textoD2: "to tell you",
+              tamano: 21,
             },
           },
           {
@@ -179,7 +182,7 @@ export default {
               conTexto: true,
               textoA: "He",
               textoD: "every day",
-              tamano: 17,
+              tamano: 21,
             },
           },
           {
@@ -190,7 +193,7 @@ export default {
               conTexto: true,
               textoA: "She",
               textoD: "a lot",
-              tamano: 14,
+              tamano: 17,
             },
           },
         ],

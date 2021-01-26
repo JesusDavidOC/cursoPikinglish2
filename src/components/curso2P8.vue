@@ -44,30 +44,119 @@
           :key="index + item.textoA"
           class="margin-bottom"
         >
-            <inputChecked
+          <b-col
+            ><inputChecked
               :esperado="item.listado"
               :conTexto="true"
               :textoA="item.textoA"
               :textoD="item.textoD"
               :tamano="item.tamano"
               :textoD2="item.textoD2"
-              audio= "/"
-          />
+          /></b-col>
         </b-row>
       </b-col>
     </b-row>
-    <b-row class="diamondContainer">
-      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+    <b-row>
       <b-col>
-        <h3 class="fuenteDiamond">
-          Rewrite the sentence, change the subject and modify the verb.
-        </h3>
+        <h3 class="subTitulo">HOW TO PRONOUNCE THE SUFFIX “ED”</h3>
       </b-col>
     </b-row>
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="11">
-        <tablaTC :cuestionario="tabla3P7" />
+      <b-col sm="3">
+        <b-row>
+          <b-col>
+            <h3 class="subTitulo">Ending sounds</h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+          <b-col>
+            <h3 class="fuenteDiamond">N, L, M, Y, R, U, V, B, G, Z.</h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+          <b-col>
+            <h3 class="fuenteDiamond">
+              some consonants sound differently from Spanish sounds such as:
+              clo<strong>se: Z</strong>
+            </h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col>
+            <h3 class="fuenteDiamond">SOUND: “d”</h3>
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col sm="7">
+        <tablaTC :cuestionario="tabla1P10" />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="3">
+        <b-row>
+          <b-col>
+            <h3 class="subTitulo">Ending sounds</h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+          <b-col>
+            <h3 class="fuenteDiamond">K, F, SH, S, X, P.</h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+          <b-col>
+            <h3 class="fuenteDiamond">
+              some consonants sound differently from Spanish sounds such as:
+              Lau<strong>gh: F</strong>
+            </h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col>
+            <h3 class="fuenteDiamond">SOUND: “t”</h3>
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col sm="7">
+        <tablaTC :cuestionario="tabla2P10" />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="3">
+        <b-row>
+          <b-col>
+            <h3 class="subTitulo">Ending sounds</h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+          <b-col>
+            <h3 class="fuenteDiamond">T, D.</h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+          <b-col>
+            <h3 class="fuenteDiamond">
+              The e sound at the end of a word is silent.
+            </h3>
+          </b-col>
+        </b-row>
+        <b-row class="diamondContainer">
+          <b-col>
+            <h3 class="fuenteDiamond">SOUND: “id”</h3>
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col sm="7">
+        <tablaTC :cuestionario="tabla3P10" />
       </b-col>
     </b-row>
   </b-container>
@@ -87,50 +176,96 @@ export default {
   },
   data() {
     return {
+        tabla3P10: {
+        fields: [
+          { key: "a", label: "Present", thClass: "subTitulo" },
+          { key: "b", label: "Past", thClass: "subTitulo" },
+          { key: "c", label: "Pronunciación", thClass: "subTitulo" },
+        ],
+        items: [
+          { a: "WANT", b: "WANTED", c: "<Wantid>" },
+          { a: "DECIDE", b: "DECIDED", c: "<Disaidid>" },               
+        ],
+      },
+        tabla2P10: {
+        fields: [
+          { key: "a", label: "Present", thClass: "subTitulo" },
+          { key: "b", label: "Past", thClass: "subTitulo" },
+          { key: "c", label: "Pronunciación", thClass: "subTitulo" },
+        ],
+        items: [
+          { a: "WORK", b: "WORKED", c: "<Workt>" },
+          { a: "FIX", b: "FIXED", c: "<Fixt>" },
+          { a: "LAUGH", b: "LAUGHED", c: "<Laft>" },
+          { a: "FINISH", b: "FINISHED", c: "<Finisht>" },
+          { a: "MISS", b: "MISSED", c: "<Mist>" },
+          { a: "STOP", b: "STOPED", c: "<Stoppt>" },          
+        ],
+      },
+      tabla1P10: {
+        fields: [
+          { key: "a", label: "Present", thClass: "subTitulo" },
+          { key: "b", label: "Past", thClass: "subTitulo" },
+          { key: "c", label: "Pronunciación", thClass: "subTitulo" },
+        ],
+        items: [
+          { a: "CLEAN", b: "CLEANED", c: "<Cliind>" },
+          { a: "SMILE", b: "SMILED", c: "<Smaild>" },
+          { a: "CLAIM", b: "CLAIMED", c: "<Cleimd>" },
+          { a: "PLAY", b: "PLAYED", c: "<Pleid>" },
+          { a: "POUR", b: "POURED", c: "<Poord>" },
+          { a: "SUE", b: "SUED", c: "<Sud>" },
+          { a: "LIVE", b: "LIVED", c: "<Livd>" },
+          { a: "GRAB", b: "GRABED", c: "<Grabd>" },
+          { a: "CLOG", b: "CLOGED", c: "<Clogd>" },
+          { a: "CLOSE", b: "CLOSED", c: "<clouzd>" },
+        ],
+      },
       listadoCompletarP9: [
         {
           listado: ["tried"],
           textoA: "1.   The world health organization",
           textoD: "to stop the spread of the virus.",
           tamano: 53,
-          audio:"/audio"
         },
         {
           listado: ["aplied"],
           textoA: "2.   I went to the embassy and",
           textoD: "for the visa.",
-          tamano: 41,
+          tamano: 40,
         },
         {
           listado: ["cried"],
           textoA: "3.	We were so happy that we  ",
           textoD: "for joy.",
-          tamano: 31,
+          tamano: 36,
         },
         {
           listado: ["dried"],
           textoA: "4.	The rays of sun ",
           textoD: "the wet grass.",
-          tamano: 29,
+          tamano: 34,
         },
         {
           listado: ["copied"],
-          textoA: "5.   The teacher didn’t give the student an A because he thinks the student",
+          textoA:
+            "5.   The teacher didn’t give the student an A because he thinks the student",
           textoD: "and pasted the story.",
-          tamano: 65,
+          tamano: 61,
         },
         {
           listado: ["replied"],
           textoA: "6.	He left his phone home however his wife",
           textoD: "all messages.",
-          tamano: 44,
+          tamano: 51,
         },
         {
-          listado: [" studied"],
+          listado: ["studied"],
           textoA: "7.	Nobody could believe I",
-          textoD: "maths and physics at the university because I was too bad ",
-          textoD2: "at solving mathematics operations at the school.",
-          tamano: 61,
+          textoD: "maths and physics at the university because ",
+          textoD2:
+            "I was too bad at solving mathematics operations at the school.",
+          tamano: 60,
         },
       ],
       tablaCompleteP9: {
@@ -196,155 +331,6 @@ export default {
             b: "Breathe-breathed ",
             c: "",
             d: "Paint-painted",
-          },
-        ],
-      },
-      tabla3P7: {
-        bordered: false,
-        fields: [
-          { key: "a", label: "I, you, we and they + verb" },
-          { key: "b", label: "Spanish translation" },
-          { key: "complejo1", label: "3rd singular person + verb (present)" },
-        ],
-        items: [
-          {
-            a: "They deny the truth",
-            b: "Ellos niegan la verdad ",
-            complejo1: {
-              lista: ["ies"],
-              conTexto: true,
-              textoA: "She den",
-              textoD: "the truth",
-              tamano: 18,
-              resuelto: true,
-            },
-          },
-          {
-            a: "We have to pay the bill",
-            b: "Tenemos que pagar la cuenta",
-            complejo1: {
-              lista: ["has"],
-              conTexto: true,
-              textoA: "He",
-              textoD: "to pay the bill",
-              tamano: 18,
-            },
-          },
-          {
-            a: "They fix cars",
-            b: "Ellos arreglan carros",
-            complejo1: {
-              lista: ["fixes"],
-              conTexto: true,
-              textoA: "The mechanic",
-              textoD: "cars",
-              tamano: 20,
-            },
-          },
-          {
-            a: "I neglect my loved ones",
-            b: "Yo descuido mis seres queridos",
-            complejo1: {
-              lista: ["neglects"],
-              conTexto: true,
-              textoA: "She",
-              textoD: "her loved ones",
-              tamano: 22,
-            },
-          },
-          {
-            a: "We miss you",
-            b: "Nosotros te extrañamos",
-            complejo1: {
-              lista: ["misses"],
-              conTexto: true,
-              textoA: "He",
-              textoD: "you",
-              tamano: 15,
-            },
-          },
-          {
-            a: "I go for a run every morning",
-            b: "Yo voy a correr cada mañana",
-            complejo1: {
-              lista: ["goes"],
-              conTexto: true,
-              textoA: "Karen",
-              textoD: "for a run every morning ",
-              tamano: 27,
-            },
-          },
-          {
-            a: "They easily dismiss anyone",
-            b: "Ellos despiden a cualquiera fácilmente",
-            complejo1: {
-              lista: ["dismisses"],
-              conTexto: true,
-              textoA: "He",
-              textoD: "anyone easily.",
-              tamano: 22,
-            },
-          },
-          {
-            a: "You know me very well",
-            b: "Tú me conoces muy bien",
-            complejo1: {
-              lista: ["knows"],
-              conTexto: true,
-              textoA: "That person",
-              textoD: "me very well ",
-              tamano: 25,
-            },
-          },
-          {
-            a: "I have something to tell you ",
-            b: "Tengo algo que contarte ",
-            complejo1: {
-              lista: ["has"],
-              conTexto: true,
-              textoA: "She",
-              textoD: "something to tell you",
-              tamano: 23,
-            },
-          },
-          {
-            a: "I walk every day",
-            b: "Yo camino todos los días",
-            complejo1: {
-              lista: ["walks"],
-              conTexto: true,
-              textoA: "He",
-              textoD: "every day",
-              tamano: 17,
-            },
-          },
-          {
-            a: "You cry a lot",
-            b: "Tú lloras mucho",
-            complejo1: {
-              lista: ["cries"],
-              conTexto: true,
-              textoA: "She",
-              textoD: "a lot",
-              tamano: 14,
-            },
-          },
-        ],
-      },
-      tabla2P7: {
-        fields: [
-          { key: "a", label: "ES" },
-          { key: "b", label: "IES" },
-          { key: "c", label: "S" },
-          { key: "d", label: "HAVE" },
-        ],
-        items: [
-          {
-            a: "Verbs ending in o, x, s, sh, ch, z",
-            b:
-              "If a verb ends with a consonant before -Y, we remove the y and add -IES",
-            c: "Add an “S” to the rest of the verbs",
-            d: "Has",
           },
         ],
       },
