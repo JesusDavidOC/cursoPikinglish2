@@ -46,11 +46,11 @@
 .parrafoIC {
     margin-bottom: 0em;
     padding-top: 0em;
-    line-height: 1.2em;
+    line-height: 1.4em;
     text-align: left;
     /*justificacion de parrafo*/
     text-align: justify;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 /deep/ .fuenteComponentes {
@@ -92,4 +92,12 @@
 
 .Green {
     background-color: chartreuse;
+}
+
+table{
+    margin-bottom: 1em;
+}
+
+.margin-bottom{
+    margin-bottom: 1em;
 }

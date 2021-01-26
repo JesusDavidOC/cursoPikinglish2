@@ -33,13 +33,27 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="10">
-        <tablaTC id="" :cuestionario="tablaCompleteP8" />
+        <tablaTC :cuestionario="tablaCompleteP9" />
       </b-col>
     </b-row>
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="10">
-        <tablaTC :cuestionario="tabla2P7" />
+      <b-col sm="11">
+        <b-row
+          v-for="(item, index) in listadoCompletarP9"
+          :key="index + item.textoA"
+          class="margin-bottom"
+        >
+            <inputChecked
+              :esperado="item.listado"
+              :conTexto="true"
+              :textoA="item.textoA"
+              :textoD="item.textoD"
+              :tamano="item.tamano"
+              :textoD2="item.textoD2"
+              audio= "/"
+          />
+        </b-row>
       </b-col>
     </b-row>
     <b-row class="diamondContainer">
@@ -69,10 +83,57 @@ export default {
   components: {
     tablaTC,
     opcionMultiple,
+    inputChecked,
   },
   data() {
     return {
-      tablaCompleteP8: {
+      listadoCompletarP9: [
+        {
+          listado: ["tried"],
+          textoA: "1.   The world health organization",
+          textoD: "to stop the spread of the virus.",
+          tamano: 53,
+          audio:"/audio"
+        },
+        {
+          listado: ["aplied"],
+          textoA: "2.   I went to the embassy and",
+          textoD: "for the visa.",
+          tamano: 41,
+        },
+        {
+          listado: ["cried"],
+          textoA: "3.	We were so happy that we  ",
+          textoD: "for joy.",
+          tamano: 31,
+        },
+        {
+          listado: ["dried"],
+          textoA: "4.	The rays of sun ",
+          textoD: "the wet grass.",
+          tamano: 29,
+        },
+        {
+          listado: ["copied"],
+          textoA: "5.   The teacher didn’t give the student an A because he thinks the student",
+          textoD: "and pasted the story.",
+          tamano: 65,
+        },
+        {
+          listado: ["replied"],
+          textoA: "6.	He left his phone home however his wife",
+          textoD: "all messages.",
+          tamano: 44,
+        },
+        {
+          listado: [" studied"],
+          textoA: "7.	Nobody could believe I",
+          textoD: "maths and physics at the university because I was too bad ",
+          textoD2: "at solving mathematics operations at the school.",
+          tamano: 61,
+        },
+      ],
+      tablaCompleteP9: {
         fields: [
           { key: "a", thClass: "noHead" },
           { key: "b", thClass: "noHead" },
@@ -82,9 +143,17 @@ export default {
           { key: "f", thClass: "noHead" },
           { key: "g", thClass: "noHead" },
         ],
-        items:[
-            {a:"Study", b: "Apply", c: "Try", d:"Cry", e:"Reply", f:"Dry", g:"Copy"}
-        ]
+        items: [
+          {
+            a: "Study",
+            b: "Apply",
+            c: "Try",
+            d: "Cry",
+            e: "Reply",
+            f: "Dry",
+            g: "Copy",
+          },
+        ],
       },
       tabla1P8: {
         fields: [
