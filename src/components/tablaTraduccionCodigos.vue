@@ -54,8 +54,8 @@ export default {
     font-size: 1.5em;
 }
 
-/deep/ td .input-group{
-    font-size: 0.8em;
+/deep/ td .ic{
+    font-size: 0.7em !important;
 }
 
 .cuestionario{
@@ -75,6 +75,5 @@ export default {
 /deep/ .noHead{
     font-size: 0em !important;
 }
-
 
 </style>
