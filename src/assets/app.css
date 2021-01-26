@@ -11,15 +11,18 @@
 }
 
 .noHead {
-    border-width: 0;
     font-size: 0;
-    height: 0.1em;
+    height: 0em;  
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
 }
 
 .subTitulo {
     color: darkcyan;
     font-size: 1.5em;
     margin-bottom: 1.5em;
+    margin-top: 1.5em;
 }
 
 .colorLetraRojo{
@@ -35,7 +38,6 @@
 .parrafo {
     /*margin-bottom: 1em;*/
     line-height: 1.2em;
-    text-align: left;
     /*justificacion de parrafo*/
     text-align: justify;
     font-size: 1.7em;
@@ -44,11 +46,11 @@
 .parrafoIC {
     margin-bottom: 0em;
     padding-top: 0em;
-    line-height: 1.2em;
+    line-height: 1.4em;
     text-align: left;
     /*justificacion de parrafo*/
     text-align: justify;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 /deep/ .fuenteComponentes {
@@ -90,4 +92,12 @@
 
 .Green {
     background-color: chartreuse;
+}
+
+table{
+    margin-bottom: 1em;
+}
+
+.margin-bottom{
+    margin-bottom: 1em;
 }
