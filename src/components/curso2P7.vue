@@ -19,7 +19,7 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="auto">
-        <tablaTC :cuestionario="tabla1P7" />
+        <tablaTC id="tabla1P8" :cuestionario="tabla1P7" />
       </b-col>
     </b-row>
     <b-row class="diamondContainer">
@@ -31,7 +31,7 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="10">
-        <tablaTC :cuestionario="tabla2P7" />
+        <tablaTC id="tabla2P8" :cuestionario="tabla2P7" />
       </b-col>
     </b-row>
     <b-row class="diamondContainer">
@@ -45,7 +45,7 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="10">
-        <tablaTC :cuestionario="tabla3P7" />
+        <tablaTC id="tabla3P8" :cuestionario="tabla3P7" />
       </b-col>
     </b-row>
   </b-container>

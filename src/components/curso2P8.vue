@@ -33,7 +33,7 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="10">
-        <tablaTC :cuestionario="tablaCompleteP9" />
+        <tablaTC id="tablaCompleteP9" :cuestionario="tablaCompleteP9" />
       </b-col>
     </b-row>
     <b-row>
@@ -91,7 +91,7 @@
         </b-row>
       </b-col>
       <b-col sm="7">
-        <tablaTC :cuestionario="tabla1P10" />
+        <tablaTC id="tabla1P10" :cuestionario="tabla1P10" />
       </b-col>
     </b-row>
     <b-row>
@@ -124,7 +124,7 @@
         </b-row>
       </b-col>
       <b-col sm="7">
-        <tablaTC :cuestionario="tabla2P10" />
+        <tablaTC id="tabla2P10" :cuestionario="tabla2P10" />
       </b-col>
     </b-row>
     <b-row>
@@ -156,7 +156,7 @@
         </b-row>
       </b-col>
       <b-col sm="7">
-        <tablaTC :cuestionario="tabla3P10" />
+        <tablaTC id="tabla3P10" :cuestionario="tabla3P10" />
       </b-col>
     </b-row>
 
@@ -166,7 +166,7 @@
 
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="11"><tablaTC :cuestionario="tabla1P11" /></b-col>      
+      <b-col sm="11"><tablaTC :cuestionario="tabla1P11" /></b-col>
     </b-row>
   </b-container>
 </template>
@@ -275,6 +275,168 @@ export default {
               textoA: "Post<span class='colorLetraRojo'>ed</span>",
               audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P15.mp3",
               tamano: "9",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Wash<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P16.mp3",
+              tamano: "10",
+            },
+            complejoAudio2: {
+              textoA: "Push<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P17.mp3",
+              tamano: "10",
+            },
+            complejoAudio3: {
+              textoA: "Connect<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P18.mp3",
+              tamano: "12",
+            },
+            complejoAudio4: {
+              textoA: "Paint<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P19.mp3",
+              tamano: "11",
+            },
+            complejoAudio5: {
+              textoA: "Rest<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P20.mp3",
+              tamano: "9",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Fix<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P16.mp3",
+              tamano: "8.5",
+            },
+            complejoAudio2: {
+              textoA: "Crash<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P17.mp3",
+              tamano: "11",
+            },
+            complejoAudio3: {
+              textoA: "Excit<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P18.mp3",
+              tamano: "10",
+            },
+            complejoAudio4: {
+              textoA: "Includ<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P19.mp3",
+              tamano: "11",
+            },
+            complejoAudio5: {
+              textoA: "Wast<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P20.mp3",
+              tamano: "9",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Check<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P21.mp3",
+              tamano: "10",
+            },
+            complejoAudio2: {
+              textoA: "Relax<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P22.mp3",
+              tamano: "10",
+            },
+            complejoAudio3: {
+              textoA: "Interrupt<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P23.mp3",
+              tamano: "12",
+            },
+            complejoAudio4: {
+              textoA: "Tast<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P24.mp3",
+              tamano: "9",
+            },
+            complejoAudio5: {
+              textoA: "Vot<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P25.mp3",
+              tamano: "8.5",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Pass<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P26.mp3",
+              tamano: "9",
+            },
+            complejoAudio2: {
+              textoA: "Reach<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P27.mp3",
+              tamano: "10",
+            },
+            complejoAudio3: {
+              textoA: "Invent<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P28.mp3",
+              tamano: "11",
+            },
+            complejoAudio4: {
+              textoA: "Count<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P29.mp3",
+              tamano: "10",
+            },
+            complejoAudio5: {
+              textoA: "Demand<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P30.mp3",
+              tamano: "12",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Danc<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P31.mp3",
+              tamano: "9.5",
+            },
+            complejoAudio2: {
+              textoA: "Search<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P32.mp3",
+              tamano: "11",
+            },
+            complejoAudio3: {
+              textoA: "Tri<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P33.mp3",
+              tamano: "8.5",
+            },
+            complejoAudio4: {
+              textoA: "Melt<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P34.mp3",
+              tamano: "10",
+            },
+            complejoAudio5: {
+              textoA: "Hesitat<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P35.mp3",
+              tamano: "12",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Forc<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P36.mp3",
+              tamano: "9",
+            },
+            complejoAudio2: {
+              textoA: "Notic<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P37.mp3",
+              tamano: "10",
+            },
+            complejoAudio3: {
+              textoA: "Play<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P38.mp3",
+              tamano: "9.5",
+            },
+            complejoAudio4: {
+              textoA: "Start<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P39.mp3",
+              tamano: "11",
+            },
+            complejoAudio5: {
+              textoA: "Bak<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P40.mp3",
+              tamano: "8.5",
             },
           },
         ],
