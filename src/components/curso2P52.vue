@@ -38,14 +38,14 @@ export default {
       tabla1P52: {
         fields: [
           { key: "html1", label: "1", thClass: "noHead" },
-          { key: "html1", label: "2", thClass: "noHead" },
-          { key: "html1", label: "3", thClass: "noHead" }
+          { key: "html2", label: "2", thClass: "noHead" },
+          { key: "html3", label: "3", thClass: "noHead" }
         ],
         items: [
           {
             html1: "I <span class='colorLetraRojo'>have got</span> a car",
-            html1: "I <span class='colorLetraRojo'>haven't got</span> a car",
-            html1: "<span class='colorLetraRojo'>Have</span> you <span class='colorLetraRojo'>got</span> a car? "
+            html2: "I <span class='colorLetraRojo'>haven't got</span> a car",
+            html3: "<span class='colorLetraRojo'>Have</span> you <span class='colorLetraRojo'>got</span> a car? "
           },
         ],
       },
