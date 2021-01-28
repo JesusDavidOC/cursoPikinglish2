@@ -159,6 +159,15 @@
         <tablaTC :cuestionario="tabla3P10" />
       </b-col>
     </b-row>
+
+    <b-row>
+      <b-col><h3 class="subTitulo">LISTENING PRACTICE</h3></b-col>
+    </b-row>
+
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="11"><tablaTC :cuestionario="tabla1P11" /></b-col>      
+    </b-row>
   </b-container>
 </template>
 
@@ -168,15 +177,109 @@ import opcionMultiple from "./opcionMultiple";
 import listaIndex from "./listaIndex";
 import inputChecked from "./inputChecked";
 import tablaTC from "./tablaTraduccionCodigos";
+import audioComp from "./audioComp";
 export default {
   components: {
     tablaTC,
     opcionMultiple,
     inputChecked,
+    audioComp,
   },
   data() {
     return {
-        tabla3P10: {
+      tabla1P11: {
+        fields: [
+          { key: "complejoAudio1", thClass: "noHead" },
+          { key: "complejoAudio2", thClass: "noHead" },
+          { key: "complejoAudio3", thClass: "noHead" },
+          { key: "complejoAudio4", thClass: "noHead" },
+          { key: "complejoAudio5", thClass: "noHead" },
+        ],
+        items: [
+          {
+            complejoAudio1: {
+              textoA: "Misse<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P1.mp3",
+              tamano: "9.5",
+            },
+            complejoAudio2: {
+              textoA: "Walk<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P2.mp3",
+              tamano: "8.9",
+            },
+            complejoAudio3: {
+              textoA: "Accept<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P3.mp3",
+              tamano: "11",
+            },
+            complejoAudio4: {
+              textoA: "Remind<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P4.mp3",
+              tamano: "11",
+            },
+            complejoAudio5: {
+              textoA: "Tend<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P5.mp3",
+              tamano: "9",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Ask<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P6.mp3",
+              tamano: "8.5",
+            },
+            complejoAudio2: {
+              textoA: "Thank<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P7.mp3",
+              tamano: "10",
+            },
+            complejoAudio3: {
+              textoA: "Appreciat<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P8.mp3",
+              tamano: "11.9",
+            },
+            complejoAudio4: {
+              textoA: "End<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P9.mp3",
+              tamano: "11",
+            },
+            complejoAudio5: {
+              textoA: "Attempt<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P10.mp3",
+              tamano: "11 ",
+            },
+          },
+          {
+            complejoAudio1: {
+              textoA: "Laugh<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P11.mp3",
+              tamano: "10",
+            },
+            complejoAudio2: {
+              textoA: "Brush<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P12.mp3",
+              tamano: "10",
+            },
+            complejoAudio3: {
+              textoA: "Cheat<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P13.mp3",
+              tamano: "10",
+            },
+            complejoAudio4: {
+              textoA: "Succeed<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P14.mp3",
+              tamano: "12",
+            },
+            complejoAudio5: {
+              textoA: "Post<span class='colorLetraRojo'>ed</span>",
+              audio: "/cursos/curso1/leccion2/audio/page8/audioC2P8E1P15.mp3",
+              tamano: "9",
+            },
+          },
+        ],
+      },
+      tabla3P10: {
         fields: [
           { key: "a", label: "Present", thClass: "subTitulo" },
           { key: "b", label: "Past", thClass: "subTitulo" },
@@ -184,10 +287,10 @@ export default {
         ],
         items: [
           { a: "WANT", b: "WANTED", c: "<Wantid>" },
-          { a: "DECIDE", b: "DECIDED", c: "<Disaidid>" },               
+          { a: "DECIDE", b: "DECIDED", c: "<Disaidid>" },
         ],
       },
-        tabla2P10: {
+      tabla2P10: {
         fields: [
           { key: "a", label: "Present", thClass: "subTitulo" },
           { key: "b", label: "Past", thClass: "subTitulo" },
@@ -199,7 +302,7 @@ export default {
           { a: "LAUGH", b: "LAUGHED", c: "<Laft>" },
           { a: "FINISH", b: "FINISHED", c: "<Finisht>" },
           { a: "MISS", b: "MISSED", c: "<Mist>" },
-          { a: "STOP", b: "STOPED", c: "<Stoppt>" },          
+          { a: "STOP", b: "STOPED", c: "<Stoppt>" },
         ],
       },
       tabla1P10: {
