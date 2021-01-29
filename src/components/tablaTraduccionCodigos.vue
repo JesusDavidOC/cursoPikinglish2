@@ -27,6 +27,32 @@
         <template v-slot:cell(html1)="row" id="hola">
             <a v-html="row.item.html1"> {{ row.item.html1 }} </a>
         </template>
+
+        <template v-slot:cell(html2)="row" id="hola2">
+            <a v-html="row.item.html2"> {{ row.item.html2 }} </a>
+        </template>
+
+        <template v-slot:cell(html3)="row" id="hola3">
+            <a v-html="row.item.html3"> {{ row.item.html3 }} </a>
+        </template>
+
+         <template v-slot:cell(complejoAudio1)="row" id="holaAudio">
+            <audioComp :elemento=" row.item.complejoAudio1" />
+        </template>
+
+        <template v-slot:cell(complejoAudio2)="row" id="holaAudio2">
+            <audioComp :elemento=" row.item.complejoAudio2" />
+        </template>
+
+        <template v-slot:cell(complejoAudio3)="row" id="holaAudio3">
+            <audioComp :elemento=" row.item.complejoAudio3" />
+        </template>
+        <template v-slot:cell(complejoAudio4)="row" id="holaAudio4">
+            <audioComp :elemento=" row.item.complejoAudio4" />
+        </template>
+        <template v-slot:cell(complejoAudio5)="row" id="holaAudio5">
+            <audioComp :elemento=" row.item.complejoAudio5" />
+        </template>
     </b-table>
 </div>
 </template>
@@ -34,11 +60,13 @@
 <script>
 import inputChecked from "./inputChecked";
 import inputCE from "./inputCEnriquecido";
+import audioComp from "./audioComp"
 
 export default {
     components: {
         inputChecked,
         inputCE,
+        audioComp,
     },
     props: {
         cuestionario: Object,

@@ -1,7 +1,7 @@
 <template>
   <b-container class="ic" fluid>
     <b-row :style="'width: ' + tamano + 'em;' +'display: inline-flex;'">
-      <b-col v-if="conTexto" sm="auto" style="padding-right: 0">
+      <b-col v-if="conTexto && textoA != ''" sm="auto" style="padding-right: 0">
         <p class="parrafoIC" v-html="textoA">{{ textoA }}</p>
       </b-col>
       <b-col style="display: inline-flex; padding-left:0.5em; padding-right: 0.5em ">
@@ -47,7 +47,7 @@
           </button>
         </div>
       </b-col>
-      <b-col v-if="conTexto" sm="auto" style="padding-left: 0">
+      <b-col v-if="conTexto && textoD != ''" sm="auto" style="padding-left: 0;padding-right: 0px">
           <p class="parrafoIC" v-html="textoD">{{ textoD }}</p>
       </b-col>
     </b-row>
