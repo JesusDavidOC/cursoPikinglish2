@@ -8,6 +8,7 @@ import app from "./assets/app.css";
 export default {
   name: "App",
   components: {
+
   },
 };
 </script>
