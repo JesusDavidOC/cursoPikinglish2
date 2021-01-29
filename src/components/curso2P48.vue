@@ -84,8 +84,10 @@
               :textoD="item.textoD"
               :tamano="item.tamano"
               :textoD2="item.textoD2"
-          /></b-col>
+          />
+          </b-col>
         </b-row>
+        <b-col> <inputCE :object="listadoCompletar2P48"/></b-col>
       </b-col>
     </b-row>
 
@@ -95,9 +97,10 @@
 
 <script>
 import inputChecked from "./inputChecked";
+import inputCE from "./inputCEnriquecido";
 export default {
   components: {
-    inputChecked,
+    inputChecked,inputCE,
   },
   data() {
     return {
@@ -157,6 +160,16 @@ export default {
           tamano: 39.8,
         },
       ],
+      listadoCompletar2P48:{
+            lista1:["might"],
+            name:"inputCheked1",
+            textoA:"10. We",
+            textoD:"go swimming in the river or we",
+            tamano1:36.2,
+            lista2:["might"],
+            textoD2:"not",
+            tamano2:12.4,
+        }
     };
   },
 };

@@ -61,9 +61,6 @@
 
 <script>
 export default {
-  created(){
-    console.log (this.textoA!="")
-  },
   props: {
     esperado: Array,
     resuelto: Boolean,
