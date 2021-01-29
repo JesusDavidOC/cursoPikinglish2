@@ -2,6 +2,10 @@
   <div id="app">
     <leccion1 />
     <leccion2 />
+    <leccion3 />
+    <leccion4 />
+    <leccion5 />
+    <leccion6 />
   </div>
 </template>
 
@@ -9,11 +13,19 @@
 import app from "./assets/app.css";
 import leccion1 from "./components/curso2Leccion1";
 import leccion2 from "./components/curso2Pag82";
+import leccion3 from "./components/curso2Pag84";
+import leccion4 from "./components/curso2Pag88";
+import leccion5 from "./components/curso2Pag91";
+import leccion6 from "./components/curso2Pag94";
 export default {
   name: "App",
   components: {
     leccion1,
     leccion2,
+    leccion3,
+    leccion4,
+    leccion5,
+    leccion6,
   },
 };
 </script>
