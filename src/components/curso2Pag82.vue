@@ -258,7 +258,7 @@
 
       <b-row>
         <b-col sm="1"></b-col>
-        <b-col sm="8">
+        <b-col sm="10">
           <tablaTC :cuestionario="tabla3P7" />
         </b-col>
       </b-row>
@@ -287,162 +287,130 @@ export default {
     return {
       tabla3P7: {
         fields: [
-          { key: "a", label: "Question" },
+          { key: "html1", label: "Question", thClasss: "noHead" },
           { key: "complejo1", label: "Positive form" },
           { key: "complejo2", label: "Negative form" },
         ],
         items: [
           {
-            a: "Are you married?",
-            complejo1: { lista: ["Yes, I am"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I am not"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Are </span> you married?",
+            complejo1: { lista: ["Yes, I am"], tamano: 13.5, resuelto: false },
+            complejo2: { lista: ["No, I am not"], tamano: 15, resuelto: false },
           },
           {
-            a: "Have you ever ridden a camel?",
-            complejo1: { lista: ["Yes, I have"], tamano: 15, resuelto: false },
-            complejo2: {
-              lista: ["No, I haven´t"],
-              tamano: 16,
-              resuelto: false,
-            },
+            html1: "<span class='colorLetraRojo'>Have </span> you ever ridden a camel?",
+            complejo1: { lista: ["Yes, I have"], tamano: 14.3, resuelto: false },
+            complejo2: { lista: ["No, I haven´t"], tamano: 15, resuelto: false},
           },
           {
-            a: "Did you look over the book?",
-            complejo1: { lista: ["Yes, I did"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I didn’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Did</span> you look over the book?",
+            complejo1: { lista: ["Yes, I did"], tamano: 13.3, resuelto: false },
+            complejo2: { lista: ["No, I didn’t"], tamano: 14.3, resuelto: false },
           },
           {
-            a: "Is that really good?",
-            complejo1: { lista: ["Yes, it is"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, it isn’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Is</span> that really good?",
+            complejo1: { lista: ["Yes, it is"], tamano: 13, resuelto: false },
+            complejo2: { lista: ["No, it isn’t"], tamano: 13.5, resuelto: false },
           },
           {
-            a: "Can you help me with the bags?",
-            complejo1: { lista: ["Yes, I can"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I can’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Can</span> you help me with the bags?",
+            complejo1: { lista: ["Yes, I can"], tamano: 13.5, resuelto: false },
+            complejo2: { lista: ["No, I can’t"], tamano: 14, resuelto: false },
           },
           {
-            a: "Does she know it?",
-            complejo1: {
-              lista: ["Yes, she does"],
-              tamano: 17,
-              resuelto: false,
-            },
-            complejo2: {
-              lista: ["No, she doesn’t"],
-              tamano: 18,
-              resuelto: false,
-            },
+            html1: "<span class='colorLetraRojo'>Does</span> she know it?",
+            complejo1: { lista: ["Yes, she does"],tamano: 16, resuelto: false},
+            complejo2: { lista: ["No, she doesn’t"],tamano: 17.3,resuelto: false},
           },
           {
-            a: "Do You understand what I am saying?",
-            complejo1: { lista: ["Yes, I do"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I don’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Do</span> You understand what I am saying?",
+            complejo1: { lista: ["Yes, I do"], tamano: 13, resuelto: false },
+            complejo2: { lista: ["No, I don’t"], tamano: 14, resuelto: false },
           },
           {
-            a: "Does she know the answer?",
-            complejo1: {
-              lista: ["Yes, she does"],
-              tamano: 17,
-              resuelto: false,
-            },
-            complejo2: {
-              lista: ["No, she doesn’t"],
-              tamano: 18,
-              resuelto: false,
-            },
+            html1: "<span class='colorLetraRojo'>Does</span> she know the answer?",
+            complejo1: {lista: ["Yes, she does"], tamano: 16, resuelto: false},
+            complejo2: {lista: ["No, she doesn’t"], tamano: 17, resuelto: false},
           },
           {
-            a: "Could	you tell me what that is?",
-            complejo1: { lista: ["Yes, I can"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I can’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Could</span>	you tell me what that is?",
+            complejo1: { lista: ["Yes, I can"], tamano: 13.5, resuelto: false },
+            complejo2: { lista: ["No, I can’t"], tamano: 14, resuelto: false },
           },
           {
-            a: "Had you had that incident before?",
-            complejo1: { lista: ["Yes, I had "], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I hadn’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Had</span> you had that incident before?",
+            complejo1: { lista: ["Yes, I had "], tamano: 14, resuelto: false },
+            complejo2: { lista: ["No, I hadn’t"], tamano: 14.5, resuelto: false },
           },
           {
-            a: "Were	they talking about animals?",
-            complejo1: {
-              lista: ["Yes, they were"],
-              tamano: 17,
-              resuelto: false,
-            },
-            complejo2: {
-              lista: ["No, they weren’t"],
-              tamano: 18,
-              resuelto: false,
-            },
+            html1: "<span class='colorLetraRojo'>Were</span>	they talking about animals?",
+            complejo1: { lista: ["Yes, they were"], tamano: 16.5, resuelto: false},
+            complejo2: {  lista: ["No, they weren’t"], tamano: 17.5, resuelto: false},
           },
           {
-            a: "May I borrow your car?",
-            complejo1: { lista: ["Yes, you may"], tamano: 17, resuelto: false },
-            complejo2: {
-              lista: ["No, you may not"],
-              tamano: 18,
-              resuelto: false,
-            },
+            html1: "<span class='colorLetraRojo'>May</span> I borrow your car?",
+            complejo1: { lista: ["Yes, you may"], tamano: 16, resuelto: false },
+            complejo2: { lista: ["No, you may not"], tamano: 17.5, resuelto: false},
           },
           {
-            a: "Am I right?",
-            complejo1: { lista: ["Yes, you are"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Am</span> I right?",
+            complejo1: { lista: ["Yes, you are"], tamano: 15, resuelto: false },
             complejo2: {
               lista: ["No, you are not"],
-              tamano: 18,
+              tamano: 17,
               resuelto: false,
             },
           },
           {
-            a: "Would you like me to come with you?",
-            complejo1: { lista: ["Yes, I would"], tamano: 17, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Would</span> you like me to come with you?",
+            complejo1: { lista: ["Yes, I would"], tamano: 15.5, resuelto: false },
             complejo2: {
               lista: ["No, I wouldn’t"],
-              tamano: 18,
-              resuelto: false,
-            },
-          },
-          {
-            a: "Can I help you?",
-            complejo1: { lista: ["Yes, you can"], tamano: 17, resuelto: false },
-            complejo2: {
-              lista: ["No, you can’t"],
-              tamano: 18,
-              resuelto: false,
-            },
-          },
-          {
-            a: "Was he singing loudly?",
-            complejo1: { lista: ["Yes, he was"], tamano: 17, resuelto: false },
-            complejo2: {
-              lista: ["No, he wasn’t"],
-              tamano: 18,
-              resuelto: false,
-            },
-          },
-          {
-            a: "Did you overtake that car?",
-            complejo1: { lista: ["Yes, I did"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I didn’t"], tamano: 16, resuelto: false },
-          },
-          {
-            a: "Have you ever had a nightmare?",
-            complejo1: { lista: ["Yes, I have"], tamano: 15, resuelto: false },
-            complejo2: {
-              lista: ["No, I haven’t"],
               tamano: 16,
               resuelto: false,
             },
           },
           {
-            a: "Do you understand what is going on?",
-            complejo1: { lista: ["Yes, I do"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, I don’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Can</span> I help you?",
+            complejo1: { lista: ["Yes, you can"], tamano: 15.5, resuelto: false },
+            complejo2: {
+              lista: ["No, you can’t"],
+              tamano: 16,
+              resuelto: false,
+            },
           },
           {
-            a: "Is it good?",
-            complejo1: { lista: ["Yes, it is"], tamano: 15, resuelto: false },
-            complejo2: { lista: ["No, it isn’t"], tamano: 16, resuelto: false },
+            html1: "<span class='colorLetraRojo'>Was</span> he singing loudly?",
+            complejo1: { lista: ["Yes, he was"], tamano: 15, resuelto: false },
+            complejo2: {
+              lista: ["No, he wasn’t"],
+              tamano: 16,
+              resuelto: false,
+            },
+          },
+          {
+            html1: "<span class='colorLetraRojo'>Did</span> you overtake that car?",
+            complejo1: { lista: ["Yes, I did"], tamano: 13.5, resuelto: false },
+            complejo2: { lista: ["No, I didn’t"], tamano: 14.5, resuelto: false },
+          },
+          {
+            html1: "<span class='colorLetraRojo'>Have</span> you ever had a nightmare?",
+            complejo1: { lista: ["Yes, I have"], tamano: 14.5, resuelto: false },
+            complejo2: {
+              lista: ["No, I haven’t"],
+              tamano: 15.5,
+              resuelto: false,
+            },
+          },
+          {
+            html1: "<span class='colorLetraRojo'>Do</span> you understand what is going on?",
+            complejo1: { lista: ["Yes, I do"], tamano: 13.4, resuelto: false },
+            complejo2: { lista: ["No, I don’t"], tamano: 14.5, resuelto: false },
+          },
+          {
+            html1: "<span class='colorLetraRojo'>Is</span> it good?",
+            complejo1: { lista: ["Yes, it is"], tamano: 14, resuelto: false },
+            complejo2: { lista: ["No, it isn’t"], tamano: 14.3, resuelto: false },
           },
         ],
       },
