@@ -19,10 +19,10 @@ export default {
             name:"inputChekedpruebas1",
             textoA:"pruebita",
             textoD:"pruebita",
-            tamano1:30,
+            tamano1:20,
             lista2:["la suya"],
             textoD2:":3",
-            tamano2:30,
+            tamano2:20,
         }
     };
   },
