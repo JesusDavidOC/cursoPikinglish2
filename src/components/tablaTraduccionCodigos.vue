@@ -1,5 +1,5 @@
 <template>
-<div class="overflow-auto maxh">
+<div id="todo" class="overflow-auto maxh">
     <b-table id="cuestionario" small :fields="this.cuestionario.fields" :items="this.cuestionario.items" responsive="sm" :bordered="true">
         <template v-slot:cell(complejo1)="row" id="hola921">
             <inputChecked :resuelto="row.item.complejo1.resuelto" :esperado="row.item.complejo1.lista" :conTexto="true" :textoA="row.item.complejo1.textoA" :textoD="row.item.complejo1.textoD" :textoD2="row.item.complejo1.textoD2" :audio="row.item.complejo1.audio" :tamano="row.item.complejo1.tamano" />
@@ -104,4 +104,7 @@ export default {
     font-size: 0em !important;
 }
 
+#todo{
+    margin-bottom: 1.5em;
+}
 </style>

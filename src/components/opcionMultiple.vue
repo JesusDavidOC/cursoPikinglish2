@@ -48,23 +48,27 @@ export default {
   },
   methods: {
     enviar(checked) {
-      this.$emit("respuestas", checked);
+      this.$emit("RESULTADO", checked);
     },
     verificacion: function (respuestas, rEsperadas) {
-      this.mensaje = "Preguntas incorrectas: ";
+      this.mensaje = "LAS RESPUESTAS A LAS PREGUNTAS: ";
       if (respuestas.length != rEsperadas.length) {
         this.mensaje = "DILIGENCIE TODAS LAS PREGUNTAS.";
       } else {
         for (var r = 0; r < respuestas.length; r++) {
           if (respuestas[r] != rEsperadas[r]) {
-            this.mensaje = this.mensaje + (r + 1) + "-";
+            if(r != respuestas.length-1){
+              this.mensaje = this.mensaje + (r + 1) + "-";
+            } else {
+              this.mensaje = this.mensaje + (r + 1);
+            }            
           }
         }
+        this.mensaje = this.mensaje + " SON EQUIVOCADAS, REVISALAS DE NUEVO!"
       }
-      if (this.mensaje == "Preguntas incorrectas: ") {
-        this.mensaje = "PREGUNTAS CORRECTAS";
+      if (this.mensaje == "LAS RESPUESTAS A LAS PREGUNTAS: ") {
+        this.mensaje = "TODAS LAS RESPUESTAS CORRECTAS";
       }
-      console.log(this.mensaje);
       this.enviar(this.mensaje);
     },
     dmensaje(valor, posicion) {

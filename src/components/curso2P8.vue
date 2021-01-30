@@ -51,7 +51,7 @@
               :textoA="item.textoA"
               :textoD="item.textoD"
               :tamano="item.tamano"
-              :textoD2="item.textoD2"
+              :textoD2="item.textoD2"            
           /></b-col>
         </b-row>
       </b-col>
@@ -494,7 +494,7 @@ export default {
           tamano: 53,
         },
         {
-          listado: ["aplied"],
+          listado: ["applied"],
           textoA: "2.   I went to the embassy and",
           textoD: "for the visa.",
           tamano: 40,
