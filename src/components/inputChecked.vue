@@ -17,17 +17,16 @@
         <div class="input-group-append">
           <button
             id="noAudio"
-            v-if="$props.audio == undefined"
+            v-if="$props.audio == undefined && toLook"
             class="btn btn-outline-secondary"
             type="button"
             v-on:click="completar"
           >
             <i class="fa fa-eye"></i>
           </button>
-
           <button
             id="paraAudio"
-            v-if="$props.audio != undefined"
+            v-if="$props.audio != undefined && toLook"
             class="btn btn-outline-secondary"
             type="button"
             v-on:click="completar"
@@ -71,6 +70,7 @@ export default {
     textoD2: String,
     audio: "",
     tamano: Number,
+    toLook: Boolean
   },
   data() {
     return {
@@ -142,10 +142,9 @@ export default {
   height: 90%;
 }
 /deep/ .form-control{
-  border-top-left-radius: 0.4em;
-  border-bottom-left-radius: 0.4em;
-  border-top-right-radius: 0em !important;
-  border-bottom-right-radius: 0em !important;
+  border-top-left-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
+  
   line-height: 1em;   
 }
 .text {
