@@ -110,6 +110,7 @@ export default {
           textoA: "1. She is busy now but she ",
           textoD: " come later.",
           tamano: 37.5,
+          
         },
         {
           listado: ["might"],
