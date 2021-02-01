@@ -82,7 +82,7 @@
               :conTexto="true"
               :textoA="item.textoA"
               :textoD="item.textoD"
-              :tamano="item.tamano"
+              :tamano="item.tamano -3.5"
               :textoD2="item.textoD2"
           />
           </b-col>
