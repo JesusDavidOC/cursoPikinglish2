@@ -1,7 +1,7 @@
 <template>
   <div style="font-size: 1.3em">
     <div v-for="(option, index) in $props.options" class="row" :key="option.pregunta+index">
-      <b-col sm="10">
+      <b-col sm="auto">
         <b-form-group
           :label="option.pregunta"
           :id="index + ''"
