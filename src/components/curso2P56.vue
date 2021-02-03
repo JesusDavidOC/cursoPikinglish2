@@ -64,8 +64,18 @@
         <tablaTC :cuestionario="tabla2P59" />
       </b-col>
     </b-row>
+
+
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="11">
+        <tablaTC :cuestionario="tabla3P59" />
+      </b-col>
+    </b-row>
+
   </b-container>
 </template>
+
 
 <script>
 import inputCE from "./inputCEnriquecido";
@@ -112,56 +122,255 @@ export default {
           { key: "azul", label: " ", thClass: "Blue" },
           { key: "amarillo", label: " ", thClass: "Yelow" },
         ],
-        items: [{
-            rojo:"1.The boy ",
-            azul:"1. Is going to ",
-            amarillo: "1. Do now "
-        },
-        {
-            rojo:"2.Are you ",
-            azul:"2. Was going to ",
-            amarillo: "2. Be a great football player "
-        },
-        {
-            rojo:"3.We ",
-            azul:"3. Is supposed to ",
-            amarillo: "3. Come here today "
-        },
-        {
-            rojo:"4.Seth ",
-            azul:"4. Was supposed to",
-            amarillo: "4. Listen to music "
-        },
-        {
-            rojo:"5. What is she ",
-            azul:"5. Were going to ",
-            amarillo: "5. Call her tomorrow "
-        },
-        {
-            rojo:"6. I am ",
-            azul:"6. Were supposed to ",
-            amarillo: "6. Learn Spanish "
-        },
-        {
-            rojo:"7. I",
-            azul:"7. What are we ",
-            amarillo: "7. Be fine "
-        },
-        {
-            rojo:"",
-            azul:"8. Going to ",
-            amarillo: " "
-        },
-        {
-            rojo:"",
-            azul:"9. Supposed to ",
-            amarillo: ""
-        },
-        {
-            rojo:"",
-            azul:"10. Are going to ",
-            amarillo: ""
-        }],
+        items: [
+          {
+            rojo: "1.The boy ",
+            azul: "1. Is going to ",
+            amarillo: "1. Do now ",
+          },
+          {
+            rojo: "2.Are you ",
+            azul: "2. Was going to ",
+            amarillo: "2. Be a great football player ",
+          },
+          {
+            rojo: "3.We ",
+            azul: "3. Is supposed to ",
+            amarillo: "3. Come here today ",
+          },
+          {
+            rojo: "4.Seth ",
+            azul: "4. Was supposed to",
+            amarillo: "4. Listen to music ",
+          },
+          {
+            rojo: "5. What is she ",
+            azul: "5. Were going to ",
+            amarillo: "5. Call her tomorrow ",
+          },
+          {
+            rojo: "6. I am ",
+            azul: "6. Were supposed to ",
+            amarillo: "6. Learn Spanish ",
+          },
+          {
+            rojo: "7. I",
+            azul: "7. What are we ",
+            amarillo: "7. Be fine ",
+          },
+          {
+            rojo: "",
+            azul: "8. Going to ",
+            amarillo: " ",
+          },
+          {
+            rojo: "",
+            azul: "9. Supposed to ",
+            amarillo: "",
+          },
+          {
+            rojo: "",
+            azul: "10. Are going to ",
+            amarillo: "",
+          },
+        ],
+      },
+      tabla3P59: {
+        fields: [
+          { key: "rojo", label: " ", thClass: "Red" },
+          { key: "amarillo", label: " ", thClass: "Blue" },
+          { key: "azul", label: " ", thClass: "Yelow" },
+          { key: "complejo1", label: "English", thClass: "" },
+          { key: "español", label: "Spanish", thClass: "" },],
+           items: [
+          {
+            rojo: "1",
+            amarillo: "4",
+            azul: "3",
+            complejo1:  {
+              lista: ["The boy was supposed to come here today"],
+              tamano: 30.4,
+              resultado: false,
+            },
+            español:"Se supone que el chico tenía que venir aquí hoy"
+          },
+          {
+            rojo: "2",
+            amarillo: "8",
+            azul: "5",
+            complejo1:  {
+              lista: ["Are you going to call her tomorrow?"],
+              tamano: 26,
+              resultado: false,
+            },
+            español:"¿Vas a llamar la mañana?"
+          },
+          {
+            rojo: "3",
+            amarillo: "6",
+            azul: "3",
+            complejo1:  {
+              lista: ["We were supposed to come here today"],
+              tamano: 28,
+              resultado: false,
+            },
+            español:"Nosotros debíamos venir aquí hoy"
+          },
+          {
+            rojo: "4",
+            amarillo: "1",
+            azul: "2",
+            complejo1:  {
+              lista: ["Seth is going to be a great football player"],
+              tamano: 29,
+              resultado: false,
+            },
+            español:"Seth va a ser un gran jugador de futbol"
+          },
+           {
+            rojo: "5",
+            amarillo: "8",
+            azul: "1",
+            complejo1:  {
+              lista: ["What is she going to do now?"],
+              tamano: 22.8,
+              resultado: false,
+            },
+            español:"¿Qué va ella a hacer ahora?"
+          },
+          {
+            rojo: "6",
+            amarillo: "8",
+            azul: "7",
+            complejo1:  {
+              lista: ["I am going to be fine"],
+              tamano: 17.4,
+              resultado: false,
+            },
+            español:"Yo voy a estar bien"
+          },
+          {
+            rojo: "6",
+            amarillo: "9",
+            azul: "6",
+            complejo1:  {
+              lista: ["I am supposed to learn Spanish"],
+              tamano: 24,
+              resultado: false,
+            },
+            español:"Yo debo aprender español"
+          },
+          {
+            rojo: "3",
+            amarillo: "10",
+            azul: "4",
+            complejo1:  {
+              lista: ["We are going to listen to music"],
+              tamano: 23.4,
+              resultado: false,
+            },
+            español:"Nosotros vamos a escuchar música"
+          },
+          {
+            rojo: "1",
+            amarillo: "1",
+            azul: "4",
+            complejo1:  {
+              lista: ["The boy is going to listen to music"],
+              tamano: 25,
+              resultado: false,
+            },
+            español:"El chico va a escuchar música"
+          },
+          {
+            rojo: "4",
+            amarillo: "2",
+            azul: "2",
+            complejo1:  {
+              lista: ["Seth was going to be a great football player"],
+              tamano: 30.8,
+              resultado: false,
+            },
+            español:"Seth iba a ser un gran jugador de futbol"
+          },
+           {
+            rojo: "5",
+            amarillo: "9",
+            azul: "1",
+            complejo1:  {
+              lista: ["What is she supposed to do now?"],
+              tamano: 25,
+              resultado: false,
+            },
+            español:"¿Qué se supone que ella debe hacer?"
+          },
+           {
+            rojo: "4",
+            amarillo: "4",
+            azul: "5",
+            complejo1:  {
+              lista: ["Seth was supposed to call her tomorrow"],
+              tamano: 29,
+              resultado: false,
+            },
+            español:"Seth debía llamarla a ella mañana"
+          },
+          {
+            rojo: "1",
+            amarillo: "1",
+            azul: "2",
+            complejo1:  {
+              lista: ["The boy is going to be a great football player"],
+              tamano: 31.4,
+              resultado: false,
+            },
+            español:"El chico va a hacer un gran jugador de futbol"
+          },
+          {
+            rojo: "2",
+            amarillo: "8",
+            azul: "6",
+            complejo1:  {
+              lista: ["Are you going to learn Spanish?"],
+              tamano: 24,
+              resultado: false,
+            },
+            español:"¿Vas a aprender español?"
+          },
+          {
+            rojo: "7",
+            amarillo: "4",
+            azul: "5",
+            complejo1:  {
+              lista: ["I was supposed to call her tomorrow"],
+              tamano: 26.4,
+              resultado: false,
+            },
+            español:"Yo debí llamarla a ella mañana"
+          },
+          {
+            rojo: "6",
+            amarillo: "8",
+            azul: "7",
+            complejo1:  {
+              lista: ["I am going to be fine"],
+              tamano: 17.4,
+              resultado: false,
+            },
+            español:"Yo voy a estar bien"
+          },
+          {
+            rojo: "3",
+            amarillo: "5",
+            azul: "4",
+            complejo1:  {
+              lista: ["We were going to listen to music"],
+              tamano: 24,
+              resultado: false,
+            },
+            español:"Nosotros íbamos a escuchar música"
+          },
+        ],
       },
     };
   },
