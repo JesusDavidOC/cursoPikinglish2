@@ -413,6 +413,49 @@
           </h3>
         </b-col>
       </b-row>
+
+      <b-row>
+        <b-col sm="1"></b-col>
+        <b-col sm="11">
+          <h3>
+            <b>I can´t help:</b> no puedo dejar de. <br><br>
+            <b>It is worth:</b> vale la pena. <br><br>
+            <b>Have difficulty:</b> tener dificultades. <br><br>
+            <b>There is no point:</b> no tener sentido.  <br><br>
+            <b>Spend time:</b> pasar tiempo.  <br><br>
+            <b>I can´t bear / stand :</b> no puedo tolerar o soportar. <br><br>
+            <b>It is no use / it is no good:</b> de nada sirve. <br> <br>
+            <b>Have trouble:</b> tener problemás.  <br> <br>
+            <b>It is a waste of money or time:</b> es una Perdida de dinero o tiempo.  <br><br>
+            <b>Waste time:</b> desperdiciar el tiempo. 
+          </h3>
+        </b-col>
+      </b-row>
+      <br><br>
+
+      <b-row>
+        <b-col sm="1"></b-col>
+        <b-col sm="11">
+          <h3>
+            <b>1.</b> There's nothing you can do about the sitúation, so <b>it's no use</b> worry<span class="colorLetraRojo">ing</span> about it. <br><br>
+            <b>2. It's no good</b> try<span class="colorLetraRojo">ing</span> to persuade me. You won't succeed.<br><br>
+            <b>3. There's no point in</b> hav<span class="colorLetraRojo">ing</span> a car if you never use it. <br><br>
+            <b>4. There was no point in</b> wait<span class="colorLetraRojo">ing</span> any longer, so we went. <br><br>
+            <b>5.</b> I live only a short walk from here, so <b>it's not worth</b> tak<span class="colorLetraRojo">ing</span> a taxi. <br><br>
+            <b>6.</b> Our flight was very early in the morning, so <b>it wasn't worth</b> go<span class="colorLetraRojo">ing</span> to bed<br><br>
+            <b>7.</b> What was the film like? Was it <b>worth see</b><span class="colorLetraRojo">ing</span> ? <br><br>
+            <b>8.</b> Thieves broke into the house but didn't take anything. There was nothing <b>worth steal</b><span class="colorLetraRojo">ing</span>. <br><br>
+            <b>9.</b> I had no <b>difficulty</b> find<span class="colorLetraRojo">ing</span>a place to live. <br><br>
+            <b>10.</b> Did you have any <b>difficulty</b> gett<span class="colorLetraRojo">ing</span> a job?<br><br>
+            <b>11.</b> People often have <b>difficulty</b> read<span class="colorLetraRojo">ing</span> my writing. <br><br>
+            <b>12.</b> I had no <b>trouble</b> find<span class="colorLetraRojo">ing</span> a place to live. <br><br>
+            <b>13.</b> It was a <b>waste of time</b> read<span class="colorLetraRojo">ing</span> that book. It was rubbish. <br><br>
+            <b>14.</b> It's a <b>waste of money</b> buy<span class="colorLetraRojo">ing</span> things you don't need. <br><br>
+            <b>15.</b> He <b>spent</b> hours try<span class="colorLetraRojo">ing</span> to repair the clock. <br><br>
+            <b>16.</b> I <b>wasted</b> a lot of time think<span class="colorLetraRojo">ing</span>  about the problem.
+          </h3>
+        </b-col>
+      </b-row>
       
     </b-container>
   </div>

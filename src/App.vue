@@ -6,6 +6,9 @@
     <leccion4 />
     <leccion5 />
     <leccion6 />
+    <leccion7 />
+    <leccion8 />
+    <leccion9 />
   </div>
 </template>
 
@@ -17,6 +20,9 @@ import leccion3 from "./components/curso2Pag84";
 import leccion4 from "./components/curso2Pag88";
 import leccion5 from "./components/curso2Pag91";
 import leccion6 from "./components/curso2Pag94";
+import leccion7 from "./components/curso2Pag102";
+import leccion8 from "./components/curso2Pag106";
+import leccion9 from "./components/curso2Pag113";
 export default {
   name: "App",
   components: {
@@ -26,6 +32,9 @@ export default {
     leccion4,
     leccion5,
     leccion6,
+    leccion7,
+    leccion8,
+    leccion9,
   },
 };
 </script>
