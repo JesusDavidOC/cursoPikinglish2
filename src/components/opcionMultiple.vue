@@ -1,6 +1,6 @@
 <template>
-  <div style="font-size: 1.3em">
-    <div v-for="(option, index) in $props.options" class="row" :key="option.pregunta+index">
+  <b-container style="font-size: 1.3em">
+    <b-row v-for="(option, index) in $props.options" :key="option.pregunta+index">
       <b-col sm="auto">
         <b-form-group
           :label="option.pregunta"
@@ -28,8 +28,8 @@
           </button>
         </div>
       </b-col>
-    </div>
-  </div>
+    </b-row>
+  </b-container>
 </template>
 
 
