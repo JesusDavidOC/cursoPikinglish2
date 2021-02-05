@@ -79,31 +79,238 @@
         <opcionMultiple
           :options="$data.cuestionarioP62"
           :rEsperadas="$data.respuestasCuestionarioP62"
-          @respuestas="$data.mensajeRespuestasP101 = $event"
+          @respuestas="$data.mensajeRespuestasP62 = $event"
         />
-        <b-button variant="primary" @click="showModal('my-modalP62')"
-          >VERIFICAR PREGUNTAS</b-button>
-        <b-modal ref="my-modalP62" hide-footer title="RESULTADO">{{
-          mensajeRespuestasP62
-        }}</b-modal>
+      </b-col>
+    </b-row>
+
+    <b-row>
+      <b-col sm="auto">
+        <h3 class="subTitulo">Pick the right spanish translation</h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="10">
+        <opcionMultiple
+          :options="$data.cuestionarioP63"
+          :rEsperadas="$data.respuestasCuestionarioP63"
+          @respuestas="$data.mensajeRespuestasP63 = $event"
+        />
+      </b-col>
+    </b-row>
+
+    <b-row>
+      <b-col sm="auto">
+        <h3 class="subTitulo">Put in order</h3>
+      </b-col>
+    </b-row>
+
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="10">
+        <b-row
+          v-for="(item, index) in listadoCompletarP63"
+          :key="index + item.textoA"
+          class="margin-bottom"
+        >
+          <b-col
+            ><inputChecked
+              :esperado="item.listado"
+              :conTexto="true"
+              :textoA="item.textoA"
+              :textoD="item.textoD"
+              :tamano="item.tamano"
+              :textoD2="item.textoD2"
+          /></b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="auto">
+        <h3 class="subTitulo">
+          Fill in the gaps to complete the right English translation.
+        </h3>
+      </b-col>
+    </b-row>
+
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="11">
+        <b-row
+          v-for="(item, index) in listadoCompletar2P63"
+          :key="index + item.textoA"
+          class="margin-bottom"
+        >
+          <b-col><inputCE :object="item" /></b-col>
+        </b-row>
       </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
+import inputChecked from "./inputChecked";
 import inputCE from "./inputCEnriquecido";
 import tablaTC from "./tablaTraduccionCodigos";
 import opcionMultiple from "./opcionMultiple";
 export default {
   components: {
+    inputChecked,
     inputCE,
     tablaTC,
     opcionMultiple,
   },
   data() {
     return {
-      mensajeRespuestasP62: "Complete las preguntas",
+      listadoCompletar2P63: [
+        {
+          lista1: ["could"],
+          name: "inputCheked2",
+          textoA: "1. Ellos pudieron haber ganado / they ",
+          textoD: "",
+          tamano1: 34,
+          lista2: ["have"],
+          textoD2: "won",
+          tamano2: 10.4,
+        },
+        {
+          lista1: ["should"],
+          name: "inputCheked2",
+          textoA: "2. Nadie debió haberse ido aún / Nobody",
+          textoD: "",
+          tamano1: 36.8,
+          lista2: ["have"],
+          textoD2: "gone yet",
+          tamano2: 13.4,
+        },
+        {
+          lista1: ["could"],
+          name: "inputCheked2",
+          textoA: "3. Él pudo haber sido el ganador / He",
+          textoD: "",
+          tamano1: 33.8,
+          lista2: ["have"],
+          textoD2: "been the winner",
+          tamano2: 18,
+        },
+        {
+          lista1: ["would"],
+          name: "inputCheked2",
+          textoA: "4. Si yo fuese tú, habría ido a la fiesta. / If I were you, I",
+          textoD: "",
+          tamano1: 47.4,
+          lista2: ["have"],
+          textoD2: "gone to the party.",
+          tamano2: 18.9,
+        },
+        {
+          lista1: ["could"],
+          name: "inputCheked2",
+          textoA: "5. Si hubiese tenido dinero, podría haber ido a la Universidad. / If I had had some money, I",
+          textoD: "",
+          tamano1: 69,
+          lista2: ["have"],
+          textoD2: "gone to university.",
+          tamano2: 19.8,
+        },
+        {
+          lista1: ["should"],
+          name: "inputCheked2",
+          textoA: "6. No debiste haberle dicho a ella nada. / You",
+          textoD: "not",
+          tamano1: 41.8,
+          lista2: ["have"],
+          textoD2: "told her anything.",
+          tamano2: 18.9,
+        },
+        {
+          lista1: ["would"],
+          name: "inputCheked2",
+          textoA: "7. ¿Qué habrías hecho? / What",
+          textoD: "you",
+          tamano1: 32.4,
+          lista2: ["have"],
+          textoD2: "done?",
+          tamano2: 12,
+        },
+        {
+          lista1: ["should"],
+          name: "inputCheked2",
+          textoA: "8. No debiste haber ido sin avisar. / You",
+          textoD: "not",
+          tamano1: 38,
+          lista2: ["have"],
+          textoD2: "left without saying good-bye",
+          tamano2: 26,
+        },
+      ],
+      respuestasCuestionarioP63: ["C", "B", "C"],
+      cuestionarioP63: [
+        {
+          respuesta: "",
+          pregunta: "1. I would have liked to do that.",
+          options: [
+            {
+              text: "A)  Me gustaría eso",
+              value: "A",
+              disabled: false,
+            },
+            {
+              text: "B) Me ha gustado eso",
+              value: "B",
+              disabled: false,
+            },
+            {
+              text: "C) Me habría gustado hacer eso",
+              value: "C",
+              disabled: false,
+            },
+          ],
+        },
+        {
+          respuesta: "",
+          pregunta: "2. They shouldn’t have let him in ",
+          options: [
+            {
+              text: "A)  Ellos deberían dejarlo entrar",
+              value: "A",
+              disabled: false,
+            },
+            {
+              text: "B) No deberían haberlo dejado entrar",
+              value: "B",
+              disabled: false,
+            },
+            {
+              text: "C) Ellos no deberían haberle permitido irse ",
+              value: "C",
+              disabled: false,
+            },
+          ],
+        },
+        {
+          respuesta: "",
+          pregunta: "3. He could have been a super star",
+          options: [
+            {
+              text: "A)  Él pudo ser una super Estrella",
+              value: "A",
+              disabled: false,
+            },
+            {
+              text: "B) él ha sido una super estrella ",
+              value: "B",
+              disabled: false,
+            },
+            {
+              text: "C) él pudo haber sido una super estrella",
+              value: "C",
+              disabled: false,
+            },
+          ],
+        },
+      ],
       respuestasCuestionarioP62: [
         "B",
         "A",
@@ -317,7 +524,7 @@ export default {
         },
         {
           respuesta: "",
-          pregunta: "9. It ___ (taste) delicious, but you didn’t add sugar.",
+          pregunta: "10. It ___ (taste) delicious, but you didn’t add sugar.",
           audio: "",
           options: [
             {
@@ -394,6 +601,27 @@ export default {
           },
         ],
       },
+      listadoCompletarP63: [
+        {
+          listado: ["What do you think I should have done"],
+          textoA: "1. YOU/DO/WHAT/SHOULD/HAVE/THINK/I/DONE? ",
+          textoD: "",
+          tamano: "62",
+        },
+        {
+          listado: ["I could have been the king"],
+          textoA: "2. I/HAVE/BEEN/COULD/THE KING ",
+          textoD: "",
+          tamano: "45",
+        },
+        {
+          listado: ["What would you have done?"],
+          textoA: "3. WOULD/YOU/WHAT/DONE? /HAVE",
+          textoD: "",
+          tamano: "50.8",
+        },
+        
+      ],
     };
   },
 };
