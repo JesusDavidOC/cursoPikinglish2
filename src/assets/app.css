@@ -4,10 +4,14 @@
     line-height: 2.5em;
     text-align: justify;
 }
+.diamondContainer{
+    margin-top: 2em;
+}
 
 .diamondContainer .col-sm-auto {
     padding-right: 0;
     padding-left: 0;
+    
 }
 
 .noHead {
