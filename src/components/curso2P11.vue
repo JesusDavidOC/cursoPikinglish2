@@ -181,6 +181,20 @@
         </b-row>
       </b-col>
     </b-row>
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          THE BEST DAY EVER
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC id="tabla1P15" :cuestionario="tabla1P15" />
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -200,6 +214,19 @@ export default {
   },
   data() {
     return {
+      tabla1P15:{
+        fields:[{key: "complejoAudio1", thClass:"noHead"},
+        {key: "b", thClass:"noHead"},
+        ],
+        items:[
+          {complejoAudio1:{textoA: "Strange", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P1.mp3", tamano:"15"}, b:"Extraño"},
+          {complejoAudio1:{textoA: "Funny", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P2.mp3", tamano:"15"}, b:"Divertido"},
+          {complejoAudio1:{textoA: "Errands", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P3.mp3", tamano:"15"}, b:"Mandado"},
+          {complejoAudio1:{textoA: "Flip Flop", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P4.mp3", tamano:"15"}, b:"Chancleta"},
+          {complejoAudio1:{textoA: "Knees", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P5.mp3", tamano:"15"}, b:"Rodillas"},
+          {complejoAudio1:{textoA: "Inside", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P6.mp3", tamano:"15"}, b:"Adentro"},
+        ]
+      },
       listadoInputsP15: [
         {
           esperado: ["Bought"],
