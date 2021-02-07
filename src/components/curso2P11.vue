@@ -29,7 +29,7 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="auto">
-        <tablaTC id="tabla1P11" :cuestionario="tabla1P11" />
+        <tablaTC id="tabla1P10" :cuestionario="tabla1P10" />
       </b-col>
     </b-row>
     <b-row class="diamondContainer">
@@ -44,7 +44,7 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="auto">
-        <tablaTC id="tabla1P11" :cuestionario="tabla1P12" />
+        <tablaTC id="tabla1P11" :cuestionario="tabla1P11" />
       </b-col>
     </b-row>
     <b-row class="diamondContainer">
@@ -59,7 +59,126 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col sm="auto">
-        <tablaTC id="tabla1P11" :cuestionario="tabla2P12" />
+        <tablaTC id="tabla2P11" :cuestionario="tabla2P11" />
+      </b-col>
+    </b-row>
+
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          Fourth group: Verbs spelled the same as in the past as well as in
+          participle
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC id="tabla1P12" :cuestionario="tabla1P12" />
+      </b-col>
+    </b-row>
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          Fifth group: The vowel changes in all three forms. I, A, U
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC id="tabla1P13" :cuestionario="tabla1P13" />
+      </b-col>
+    </b-row>
+
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          Sixth group: Past tense ending in ew and participle verbs ending in wn
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC id="tabla2P13" :cuestionario="tabla2P13" />
+      </b-col>
+    </b-row>
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          Seventh group: Present form is spelled the same as participle.
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC id="tabla1P14" :cuestionario="tabla1P14" />
+      </b-col>
+    </b-row>
+
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          Eighth group: Ending in <span class="colorLetraRojo">re</span> in past
+          and in <span class="colorLetraRojo">rn</span> in participle.
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC id="tabla2P14" :cuestionario="tabla2P14" />
+      </b-col>
+    </b-row>
+
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">Ninth group: Other irregular verbs.</h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <tablaTC id="tabla3P14" :cuestionario="tabla3P14" />
+      </b-col>
+    </b-row>
+
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">
+          Answer the following questions with verbs in the past.
+        </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="auto">
+        <b-row
+          v-for="(item, index) in listadoInputsP15"
+          :key="'listadoInputsP15' + index"
+        >
+          <b-row >
+            <h4><strong>{{ item.pregunta }}</strong></h4>
+          </b-row>
+          <b-row> </b-row>
+          <inputChecked
+            :esperado="item.esperado"
+            :tamano="item.tamano"
+            :conTexto="true"
+            :textoA="item.textoA"
+            :textoD="item.textoD"
+            :textoD2="item.textoD2"
+          />
+        </b-row>
       </b-col>
     </b-row>
   </b-container>
@@ -81,7 +200,381 @@ export default {
   },
   data() {
     return {
-      tabla2P12: {
+      listadoInputsP15: [
+        {
+          esperado: ["Bought"],
+          pregunta: "1.	What did you buy?",
+          textoA: "I",
+          textoD: "a pair of shoes",
+          tamano: 19.8,
+        },
+        {
+          esperado: ["went"],
+          pregunta: "2.	Where did you go?",
+          textoA: "I",
+          textoD: "nowhere",
+          tamano: 14.5,
+        },
+        {
+          esperado: ["spoke"],
+          pregunta: "3.	Who did you speak to?",
+          textoA: "I",
+          textoD: "to Michael",
+          tamano: 16.4,
+        },
+        {
+          esperado: ["felt"],
+          pregunta: "4.	How did you feel?",
+          textoA: "I",
+          textoD: "very good",
+          tamano: 14.5,
+        },
+        {
+          esperado: ["met"],
+          pregunta: "5.	When did you meet Victor?",
+          textoA: "I",
+          textoD: "him a couple weeks ago",
+          tamano: 24.3,
+        },
+        {
+          esperado: ["drank"],
+          pregunta: "6.	How many  glasses of milk did you drink?",
+          textoA: "I",
+          textoD: "six of them.",
+          tamano: 17,
+        },
+        {
+          esperado: ["saw"],
+          pregunta: "7.	What time did you see Britney?",
+          textoA: "I",
+          textoD: "her at about 6:00 am",
+          tamano: 22,
+        },
+        {
+          esperado: ["taught"],
+          pregunta: "8.	What did you teach students?",
+          textoA: "I",
+          textoD: "them how to deal with a breakup .",
+          tamano: 32,
+        },
+        {
+          esperado: ["took"],
+          pregunta: "9.	Where did you take your children yesterday?",
+          textoA: "I",
+          textoD: "them to the swimming pool.",
+          tamano: 26.7,
+        },
+        {
+          esperado: ["found"],
+          pregunta: "10.	What did you find?",
+          textoA: "I",
+          textoD: "a ring",
+          tamano: 13,
+        },
+        {
+          esperado: ["wore"],
+          pregunta: "11.	What did you wear to the party last night?",
+          textoA: "I",
+          textoD: "a beautiful red dress.",
+          tamano: 22.8,
+        },
+        {
+          esperado: ["ran"],
+          pregunta: "12.	I saw you running yesterday, how far did you run?",
+          textoA: "I",
+          textoD: "nearly 10 km.",
+          tamano: 16.8,
+        },
+        {
+          esperado: ["flew"],
+          pregunta: "13.	Welcome to Colombia! Where did you fly in from?",
+          textoA: "I",
+          textoD: "in from London. It was a long journey!",
+          tamano: 33.3,
+        },
+        {
+          esperado: ["threw"],
+          pregunta: "14.	Did you throw that stone at me?",
+          textoA: "No, Johnny",
+          textoD: "it at you.",
+          tamano: 22,
+        },
+        {
+          esperado: ["left"],
+          pregunta: "15.	What time did you leave the party last night?",
+          textoA: "I",
+          textoD: "at 11pm, I think. I was so tired.",
+          tamano: 28,
+        },
+        {
+          esperado: ["said"],
+          pregunta: "16.	What did you say to me?",
+          textoA: "I",
+          textoD: "you're beautiful.",
+          tamano: 19,
+        },
+        {
+          esperado: ["forgave"],
+          pregunta: "17.	Will you ever forgive him?",
+          textoA: "I",
+          textoD: "him yesterday.",
+          tamano: 19.9,
+        },
+        {
+          esperado: ["woke"],
+          pregunta: "18.	What time do you normally wake up?",
+          textoA: "Well, this morning I",
+          textoD: "up at 10am, but normally",
+          textoD2:"I wake up at 7am.",
+          tamano: 37.8,
+        },
+        {
+          esperado: ["hid"],
+          pregunta: "19.	Where did you hide when that man came into your room?",
+          textoA: "I",
+          textoD: "under the bed!",
+          tamano: 17.5,
+        },
+        {
+          esperado: ["thought"],
+          pregunta: "20.	What did you think was going to happen?",
+          textoA: "I",
+          textoD: "she’d say yes and we’d live happily ever after.",
+          tamano: 41,
+        },        
+      ],
+      tabla3P14: {
+        fields: [
+          { key: "a", label: "Present", thClass: "colorLetraRojo" },
+          { key: "b", label: "Past", thClass: "colorLetraRojo" },
+          { key: "c", label: "Participle ", thClass: "colorLetraRojo" },
+          { key: "d", label: "Translation ", thClass: "colorLetraRojo" },
+        ],
+        items: [
+          { a: "Get", b: "Got", c: "Gotten/got", d: "Conseguir." },
+          { a: "Go", b: "Went", c: "Gone", d: "Ir." },
+          { a: "Do", b: "Did", c: "Done", d: "Hacer." },
+          { a: "Lie", b: "Lay", c: "Lain", d: "Acostarse." },
+        ],
+      },
+      tabla2P14: {
+        fields: [
+          { key: "a", label: "Present", thClass: "colorLetraRojo" },
+          { key: "html1", label: "Past", thClass: "colorLetraRojo" },
+          { key: "html2", label: "Participle ", thClass: "colorLetraRojo" },
+          { key: "b", label: "Translation ", thClass: "colorLetraRojo" },
+        ],
+        items: [
+          {
+            a: "Swear",
+            html1: "Swo<span class='colorLetraRojo'>re</span>",
+            html2: "Swo<span class='colorLetraRojo'>rn</span>",
+            b: "Jurar.",
+          },
+          {
+            a: "Wear",
+            html1: "Wo<span class='colorLetraRojo'>re</span>",
+            html2: "Wo<span class='colorLetraRojo'>rn</span>",
+            b: "Usar.",
+          },
+          {
+            a: "Tear",
+            html1: "To<span class='colorLetraRojo'>re</span>",
+            html2: "To<span class='colorLetraRojo'>rn</span>",
+            b: "Arrancar.",
+          },
+          {
+            a: "Bear",
+            html1: "Bo<span class='colorLetraRojo'>re</span>",
+            html2: "Bo<span class='colorLetraRojo'>rn</span>",
+            b: "Soportar.",
+          },
+        ],
+      },
+      tabla1P14: {
+        fields: [
+          { key: "a", label: "Present", thClass: "colorLetraRojo" },
+          { key: "b", label: "Past", thClass: "colorLetraRojo" },
+          { key: "c", label: "Participle ", thClass: "colorLetraRojo" },
+          { key: "d", label: "Translation ", thClass: "colorLetraRojo" },
+        ],
+        items: [
+          { a: "Come", b: "Came", c: "Come", d: "Venir." },
+          { a: "Become", b: "Became", c: "Become", d: "Volverse." },
+          { a: "Run", b: "Ran", c: "Run", d: "Correr." },
+        ],
+      },
+      tabla2P13: {
+        fields: [
+          { key: "a", label: "Present", thClass: "colorLetraRojo" },
+          { key: "html2", label: "Past", thClass: "colorLetraRojo" },
+          { key: "html3", label: "Participle ", thClass: "colorLetraRojo" },
+          { key: "b", label: "Translation ", thClass: "colorLetraRojo" },
+        ],
+        items: [
+          {
+            a: "Blow",
+            html2:
+              "<span class='colorLetraAzul'>Bl<span class='colorLetraRojo'>ew</span></span>",
+            html3:
+              "<span class='colorLetraAzul'>Blo<span class='colorLetraRojo'>wn</span></span>",
+            b: "Soplar.",
+          },
+          {
+            a: "Fly",
+            html2:
+              "<span class='colorLetraAzul'>Fl<span class='colorLetraRojo'>ew</span></span>",
+            html3:
+              "<span class='colorLetraAzul'>Flo<span class='colorLetraRojo'>wn</span></span>",
+            b: "Volar.",
+          },
+          {
+            a: "Throw",
+            html2:
+              "<span class='colorLetraAzul'>Thr<span class='colorLetraRojo'>ew</span></span>",
+            html3:
+              "<span class='colorLetraAzul'>Thro<span class='colorLetraRojo'>wn</span></span>",
+            b: "Lanzar.",
+          },
+          {
+            a: "Draw",
+            html2:
+              "<span class='colorLetraAzul'>Dr<span class='colorLetraRojo'>ew</span></span>",
+            html3:
+              "<span class='colorLetraAzul'>Blo<span class='colorLetraRojo'>wn</span></span>",
+            b: "Dibujar.",
+          },
+
+          {
+            a: "Grow",
+            html2:
+              "<span class='colorLetraAzul'>Gr<span class='colorLetraRojo'>ew</span></span>",
+            html3:
+              "<span class='colorLetraAzul'>Gro<span class='colorLetraRojo'>wn</span></span>",
+            b: "Sembrar-crecer.",
+          },
+
+          {
+            a: "Know",
+            html2:
+              "<span class='colorLetraAzul'>Kn<span class='colorLetraRojo'>ew</span></span>",
+            html3:
+              "<span class='colorLetraAzul'>Kno<span class='colorLetraRojo'>wn</span></span>",
+            b: "Saber.",
+          },
+        ],
+      },
+      tabla1P13: {
+        fields: [
+          { key: "html1", label: "Present", thClass: "colorLetraRojo" },
+          { key: "html2", label: "Past", thClass: "colorLetraRojo" },
+          { key: "html3", label: "Participle ", thClass: "colorLetraRojo" },
+          { key: "d", label: "Translation ", thClass: "colorLetraRojo" },
+        ],
+        items: [
+          {
+            html1: "Beg<span class='colorLetraRojo'>i</span>n",
+            html2: "Beg<span class='colorLetraRojo'>a</span>n",
+            html3: "Beg<span class='colorLetraRojo'>u</span>n",
+            d: "Iniciar.",
+          },
+          {
+            html1: "S<span class='colorLetraRojo'>i</span>ng",
+            html2: "S<span class='colorLetraRojo'>a</span>ng",
+            html3: "S<span class='colorLetraRojo'>u</span>ng",
+            d: "Cantar.",
+          },
+          {
+            html1: "R<span class='colorLetraRojo'>i</span>ng",
+            html2: "R<span class='colorLetraRojo'>a</span>ng",
+            html3: "R<span class='colorLetraRojo'>u</span>ng",
+            d: "Tocar.",
+          },
+          {
+            html1: "Shr<span class='colorLetraRojo'>i</span>nk",
+            html2: "Shr<span class='colorLetraRojo'>a</span>nk",
+            html3: "Shr<span class='colorLetraRojo'>u</span>nk",
+            d: "Encoger.",
+          },
+          {
+            html1: "S<span class='colorLetraRojo'>i</span>nk",
+            html2: "S<span class='colorLetraRojo'>a</span>nk",
+            html3: "S<span class='colorLetraRojo'>u</span>nk",
+            d: "Hundir.",
+          },
+          {
+            html1: "St<span class='colorLetraRojo'>i</span>nk",
+            html2: "St<span class='colorLetraRojo'>a</span>nk",
+            html3: "St<span class='colorLetraRojo'>u</span>nk",
+            d: "Apestar.",
+          },
+          {
+            html1: "Dr<span class='colorLetraRojo'>i</span>nk",
+            html2: "Dr<span class='colorLetraRojo'>a</span>nk",
+            html3: "Dr<span class='colorLetraRojo'>u</span>nk",
+            d: "Beber.",
+          },
+        ],
+      },
+      tabla1P12: {
+        fields: [
+          { key: "a", label: "Present", thClass: "colorLetraRojo" },
+          { key: "b", label: "Past", thClass: "colorLetraRojo" },
+          { key: "c", label: "Participle ", thClass: "colorLetraRojo" },
+          { key: "d", label: "Translation ", thClass: "colorLetraRojo" },
+        ],
+        items: [
+          { a: "Tell", b: "Told", c: "Told", d: "Contar." },
+          { a: "Say", b: "Said", c: "Said", d: "Decir." },
+          { a: "Understand", b: "Understood", c: "Understood", d: "Entender." },
+          { a: "Bleed", b: "Bled", c: "Bled", d: "Sangrar." },
+          { a: "Bend", b: "Bent", c: "Bent", d: "Doblar." },
+          { a: "Send", b: "Sent", c: "Sent", d: "Enviar." },
+          { a: "Lend", b: "Lent", c: "Lent", d: "Prestar." },
+          { a: "Light", b: "Lit", c: "Lit", d: "Encender." },
+          { a: "Pay", b: "Paid", c: "Paid", d: "Pagar." },
+          { a: "Breed", b: "Bred", c: "Bred", d: "Criar o reproducir." },
+          { a: "Mean", b: "Meant", c: "Meant", d: "Querer decir." },
+          { a: "Build", b: "Built", c: "Built", d: "Construir." },
+          { a: "Cling", b: "Clung", c: "Clung", d: "Aferrarse." },
+          { a: "Creep", b: "Crept", c: "Crept", d: "Trepar." },
+          { a: "Deal", b: "Dealt", c: "Dealt", d: "Repartir." },
+          { a: "Feed", b: "Fed", c: "Fed", d: "Alimentar." },
+          { a: "Feel", b: "Felt", c: "Felt", d: "Sentir." },
+          { a: "Find", b: "Found", c: "Found", d: "Encontrar." },
+          { a: "Grind", b: "Ground", c: "Ground", d: "Moler." },
+          { a: "Hear", b: "Heard", c: "Heard", d: "Oír." },
+          { a: "Hold", b: "Held", c: "Held", d: "Sostener." },
+          { a: "Keep", b: "Kept", c: "Kept", d: "Mantener." },
+          { a: "Kneel", b: "Knelt", c: "Knelt", d: "Arrodillar." },
+          { a: "Lay", b: "Laid", c: "Laid", d: "Poner." },
+          { a: "Lead", b: "Led", c: "Led", d: "Dirigir." },
+          { a: "Leave", b: "Left", c: "Left", d: "Dejar." },
+          { a: "Lose", b: "Lost", c: "Lost", d: "Perder." },
+          { a: "Make", b: "Made", c: "Made", d: "Hacer." },
+          { a: "Meet", b: "Met", c: "Met", d: "Conocer." },
+          { a: "Sell", b: "Sold", c: "Sold", d: "Vender." },
+          { a: "Shoot", b: "Shot", c: "Shot", d: "Disparar." },
+          { a: "Shine", b: "Shone", c: "Shone", d: "Alumbrar." },
+          { a: "Sit", b: "Sat", c: "Sat", d: "Sentarse." },
+          { a: "Sleep", b: "Slept", c: "Slept", d: "Dormir." },
+          { a: "Slide", b: "Slid", c: "Slid", d: "Deslizar." },
+          { a: "Spend", b: "Spent", c: "Spent", d: "Gastar." },
+          { a: "Spit", b: "Spat", c: "Spat", d: "Escupir." },
+          { a: "Stand", b: "Stood", c: "Stood", d: "Pararse." },
+          { a: "Stick", b: "Stuck", c: "Stuck", d: "Pegar." },
+          { a: "Sting", b: "Stung", c: "Stung", d: "Picar." },
+          { a: "Strike", b: "Struck", c: "Struck", d: "Golpear." },
+          { a: "Sweep", b: "Swept", c: "Swept", d: "Barrer." },
+          { a: "Swing", b: "Swung", c: "Swung", d: "Balancearse." },
+          { a: "Weep", b: "Wept", c: "Wept", d: "Llorar." },
+          { a: "Win", b: "Won", c: "Won", d: "Ganar." },
+          { a: "Wind", b: "Wound", c: "Wound", d: "Enrollar." },
+          { a: "Have", b: "Had", c: "Had", d: "Tener." },
+          { a: "Bind", b: "Bound", c: "Bound", d: "Amarrar." },
+        ],
+      },
+      tabla2P11: {
         fields: [
           { key: "a", label: "Present", thClass: "colorLetraRojo" },
           { key: "b", label: "Past", thClass: "colorLetraRojo" },
@@ -93,132 +586,152 @@ export default {
             a: "Hide",
             b: "Hid",
             d: "Esconder, esconderse",
-            html2: "<span class='colorLetraAzul'>Hidd<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Hidd<span class='colorLetraRojo'>en",
           },
           {
             a: "Bite",
             b: "Bit",
             d: "Morder.",
-            html2: "<span class='colorLetraAzul'>Bitt<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Bitt<span class='colorLetraRojo'>en",
           },
           {
             a: "Drive",
             b: "Drove",
             d: "Conducir.",
-            html2: "<span class='colorLetraAzul'>Driv<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Driv<span class='colorLetraRojo'>en",
           },
           {
             a: "Write",
             b: "Wrote",
             d: "Escribir.",
-            html2: "<span class='colorLetraAzul'>Writt<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Writt<span class='colorLetraRojo'>en",
           },
           {
             a: "Ride",
             b: "Rode",
             d: "Subir.",
-            html2: "<span class='colorLetraAzul'>Rid<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Rid<span class='colorLetraRojo'>en",
           },
           {
             a: "Rise",
             b: "Rose",
             d: "Montar.",
-            html2: "<span class='colorLetraAzul'>Ris<span class='colorLetraRojo'>en",
-          },          
+            html2:
+              "<span class='colorLetraAzul'>Ris<span class='colorLetraRojo'>en",
+          },
           {
             a: "Take",
             b: "Took",
             d: "Llevar o tomar.",
-            html2: "<span class='colorLetraAzul'>Tak<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Tak<span class='colorLetraRojo'>en",
           },
           {
             a: "See",
             b: "Saw",
             d: "Ver.",
-            html2: "<span class='colorLetraAzul'>Se<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Se<span class='colorLetraRojo'>en",
           },
           {
             a: "Eat",
             b: "Ate",
             d: "Comer.",
-            html2: "<span class='colorLetraAzul'>Eat<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Eat<span class='colorLetraRojo'>en",
           },
           {
             a: "Wake",
             b: "Woke",
             d: "Despertar.",
-            html2: "<span class='colorLetraAzul'>Wok<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Wok<span class='colorLetraRojo'>en",
           },
           {
             a: "Speak",
             b: "Spoke",
             d: "Hablar.",
-            html2: "<span class='colorLetraAzul'>Spok<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Spok<span class='colorLetraRojo'>en",
           },
           {
             a: "Break",
             b: "Broke",
             d: "Romper.",
-            html2: "<span class='colorLetraAzul'>Brok<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Brok<span class='colorLetraRojo'>en",
           },
           {
             a: "Freeze",
             b: "Froze",
             d: "Congelar.",
-            html2: "<span class='colorLetraAzul'>Froz<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Froz<span class='colorLetraRojo'>en",
           },
           {
             a: "Shake",
             b: "Shook",
             d: "Sacudir.",
-            html2: "<span class='colorLetraAzul'>Shak<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Shak<span class='colorLetraRojo'>en",
           },
           {
             a: "Forget",
             b: "Forgot",
             d: "Olvidar.",
-            html2: "<span class='colorLetraAzul'>Forgott<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Forgott<span class='colorLetraRojo'>en",
           },
           {
             a: "Steal",
             b: "Stole",
             d: "Robar.",
-            html2: "<span class='colorLetraAzul'>Stol<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Stol<span class='colorLetraRojo'>en",
           },
           {
             a: "Choose",
             b: "Chose",
             d: "Elegir.",
-            html2: "<span class='colorLetraAzul'>Chos<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Chos<span class='colorLetraRojo'>en",
           },
           {
             a: "Give",
             b: "Gave",
             d: "Dar.",
-            html2: "<span class='colorLetraAzul'>Giv<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Giv<span class='colorLetraRojo'>en",
           },
           {
             a: "Forgive",
             b: "Forgave",
             d: "Olvidar.",
-            html2: "<span class='colorLetraAzul'>Forgiv<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Forgiv<span class='colorLetraRojo'>en",
           },
           {
             a: "Forbid",
             b: "Forbade",
             d: "Prohibir.",
-            html2: "<span class='colorLetraAzul'>Forbidd<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Forbidd<span class='colorLetraRojo'>en",
           },
           {
             a: "Fall",
             b: "Fell",
             d: "Caer.",
-            html2: "<span class='colorLetraAzul'>Fall<span class='colorLetraRojo'>en",
+            html2:
+              "<span class='colorLetraAzul'>Fall<span class='colorLetraRojo'>en",
           },
-          
         ],
       },
-      tabla1P12: {
+      tabla1P11: {
         fields: [
           { key: "a", label: "Present", thClass: "colorLetraRojo" },
           { key: "html1", label: "Past", thClass: "colorLetraRojo" },
@@ -264,7 +777,7 @@ export default {
           },
         ],
       },
-      tabla1P11: {
+      tabla1P10: {
         fields: [
           { key: "a", label: "Present", thClass: "colorLetraRojo" },
           { key: "b", label: "Past", thClass: "colorLetraRojo" },
