@@ -166,8 +166,10 @@
           v-for="(item, index) in listadoInputsP15"
           :key="'listadoInputsP15' + index"
         >
-          <b-row >
-            <h4><strong>{{ item.pregunta }}</strong></h4>
+          <b-row>
+            <h4>
+              <strong>{{ item.pregunta }}</strong>
+            </h4>
           </b-row>
           <b-row> </b-row>
           <inputChecked
@@ -184,15 +186,20 @@
     <b-row class="diamondContainer">
       <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
       <b-col>
-        <h3 class="fuenteDiamond">
-          THE BEST DAY EVER
-        </h3>
+        <h3 class="fuenteDiamond">THE BEST DAY EVER</h3>
       </b-col>
     </b-row>
     <b-row>
       <b-col sm="1"></b-col>
-      <b-col sm="auto">
+      <b-col sm="4">
         <tablaTC id="tabla1P15" :cuestionario="tabla1P15" />
+      </b-col>
+    </b-row>
+
+    <b-row class="diamondContainer">
+      <b-col sm="1"></b-col>
+      <b-col sm="10">
+        <audioComp :elemento="elementoTextP16" />
       </b-col>
     </b-row>
   </b-container>
@@ -214,18 +221,66 @@ export default {
   },
   data() {
     return {
-      tabla1P15:{
-        fields:[{key: "complejoAudio1", thClass:"noHead"},
-        {key: "b", thClass:"noHead"},
+      elementoTextP16: {
+        audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E2P1.mp3",
+        textoD:
+          "Yesterday was the best day ever! The day <strong>began</strong> a little strange, but in a funny way. My mom <strong>came</strong> into my room, to wake me up, wearing a chicken costume. When I <strong>woke</strong> up, I thought I was dreaming! After, I <strong>went</strong> to run some errands. On my way to the supermarket, a man <strong>ran</strong> into me. When I <strong>looked</strong> up to see who it was, I couldn’t believe my eyes. It was Cristiano Ronaldo! When he <strong>noticed</strong> he broke my flip flop, he <strong>offered</strong> to buy a new pair. I was so nervous, I quickly replied, “uh... it is ok! I <strong>bought</strong> them a long time ago” and <strong>ran</strong> away. Then, just as I <strong>got</strong> to the supermarket, I <strong>realized</strong> I <strong>forgot</strong> my money! I felt so frustrated I <strong>fell</strong> to my knees crying. When I <strong>looked</strong> up, I <strong>saw</strong> $200 laying in the grass. I <strong>went</strong> into the store and <strong>bought</strong> a lot of food. After, I <strong>went</strong> home to tell my mom about my day. I <strong>ran</strong> inside and <strong>shouted</strong> “MOM, TODAY WAS THE BEST DAY EVER!”",
+      },
+      tabla1P15: {
+        fields: [
+          { key: "complejoAudio1", thClass: "noHead" },
+          { key: "b", thClass: "noHead" },
         ],
-        items:[
-          {complejoAudio1:{textoA: "Strange", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P1.mp3", tamano:"15"}, b:"Extraño"},
-          {complejoAudio1:{textoA: "Funny", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P2.mp3", tamano:"15"}, b:"Divertido"},
-          {complejoAudio1:{textoA: "Errands", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P3.mp3", tamano:"15"}, b:"Mandado"},
-          {complejoAudio1:{textoA: "Flip Flop", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P4.mp3", tamano:"15"}, b:"Chancleta"},
-          {complejoAudio1:{textoA: "Knees", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P5.mp3", tamano:"15"}, b:"Rodillas"},
-          {complejoAudio1:{textoA: "Inside", audio:"/cursos/curso2/leccion3/audios/page15/audioC2P15E1P6.mp3", tamano:"15"}, b:"Adentro"},
-        ]
+        items: [
+          {
+            complejoAudio1: {
+              textoA: "Strange",
+              audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E1P1.mp3",
+              tamano: 13,
+            },
+            b: "Extraño",
+          },
+          {
+            complejoAudio1: {
+              textoA: "Funny",
+              audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E1P2.mp3",
+              tamano: 13,
+            },
+            b: "Divertido",
+          },
+          {
+            complejoAudio1: {
+              textoA: "Errands",
+              audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E1P3.mp3",
+              tamano: 13,
+            },
+            b: "Mandado",
+          },
+          {
+            complejoAudio1: {
+              textoA: "Flip Flop",
+              audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E1P4.mp3",
+              tamano: 13,
+            },
+            b: "Chancleta",
+          },
+          {
+            complejoAudio1: {
+              textoA: "Knees",
+              audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E1P5.mp3",
+              tamano: 13,
+            },
+            b: "Rodillas",
+          },
+          {
+            complejoAudio1: {
+              textoA: "Inside",
+              audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E1P6.mp3",
+              tamano: 13,
+            },
+            b: "Adentro",
+          },
+        ],
       },
       listadoInputsP15: [
         {
@@ -352,7 +407,7 @@ export default {
           pregunta: "18.	What time do you normally wake up?",
           textoA: "Well, this morning I",
           textoD: "up at 10am, but normally",
-          textoD2:"I wake up at 7am.",
+          textoD2: "I wake up at 7am.",
           tamano: 37.8,
         },
         {
@@ -368,7 +423,7 @@ export default {
           textoA: "I",
           textoD: "she’d say yes and we’d live happily ever after.",
           tamano: 41,
-        },        
+        },
       ],
       tabla3P14: {
         fields: [

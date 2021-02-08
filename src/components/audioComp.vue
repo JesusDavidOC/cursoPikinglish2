@@ -13,7 +13,7 @@
           <i class="fa fa-play"></i>
         </button>
       </b-col>
-      <b-col sm="auto" style="padding-left: 0" v-if="elemento.textoB != undefined">
+      <b-col sm="auto" style="padding-left: 0" v-if="elemento.textoD != undefined">
         <p class="parrafoIC" v-html="elemento.textoD">{{ elemento.textoD }}</p>
       </b-col>
     </b-row>

@@ -5,7 +5,7 @@
     text-align: justify;
 }
 .diamondContainer{
-    margin-top: 2em;
+    margin-top: 2em !important;
 }
 
 .diamondContainer .col-sm-auto {
