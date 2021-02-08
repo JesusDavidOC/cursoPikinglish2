@@ -1,6 +1,9 @@
 <template>
   <b-container style="font-size: 1.3em">
-    <b-row v-for="(option, index) in $props.options" :key="option.pregunta+index">
+    <b-row
+      v-for="(option, index) in $props.object.options"
+      :key="option.pregunta + index"
+    >
       <b-col sm="auto">
         <b-form-group
           :label="option.pregunta"
@@ -19,7 +22,8 @@
 
       <b-col v-if="option.audio != undefined">
         <div class="input-group-append">
-          <button          
+          <button
+            id="play"
             class="btn btn-outline-secondary"
             type="button"
             v-on:click="playSound(option.audio)"
@@ -29,6 +33,31 @@
         </div>
       </b-col>
     </b-row>
+    <b-modal
+      :ref="object.options[0].pregunta + object.options[0].options[0].text"
+      hide-footer
+      title="RESULTADO"
+    >
+      <h3 class="subTitulo" v-if="mensaje != ''">{{ mensaje }}</h3>
+      <h3 class="subTitulo" v-if="mensaje == ''">
+        POR FAVOR, COMPLETE LAS PREGUNTAS.
+      </h3>
+    </b-modal>
+    <b-row>
+      <b-col></b-col>
+      <b-col sm="auto">
+        <b-button
+          variant="primary"
+          @click="
+            showModal(
+              object.options[0].pregunta + object.options[0].options[0].text
+            )
+          "
+          >VERIFICAR PREGUNTAS</b-button
+        >
+      </b-col>
+      <b-col></b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -36,9 +65,7 @@
 <script>
 export default {
   props: {
-    options: Array,
-    label: String,
-    rEsperadas: Array,
+    object: Object,
   },
   data() {
     return {
@@ -47,39 +74,57 @@ export default {
     };
   },
   methods: {
-    enviar(checked) {
-      this.$emit("RESULTADO", checked);
+    showModal(text) {
+      this.$refs[text].show();
     },
     verificacion: function (respuestas, rEsperadas) {
+      if(this.incompleta()){
+        console.log("incompleta")
+      }
       this.mensaje = "LAS RESPUESTAS A LAS PREGUNTAS: ";
       if (respuestas.length != rEsperadas.length) {
         this.mensaje = "DILIGENCIE TODAS LAS PREGUNTAS.";
       } else {
         for (var r = 0; r < respuestas.length; r++) {
           if (respuestas[r] != rEsperadas[r]) {
-            if(r != respuestas.length-1){
-              this.mensaje = this.mensaje + (r + 1) + "-";
+            if (r != 0) {
+              this.mensaje = this.mensaje + "-" + (r + 1);
             } else {
               this.mensaje = this.mensaje + (r + 1);
-            }            
+            }
           }
         }
-        this.mensaje = this.mensaje + " SON EQUIVOCADAS, REVISALAS DE NUEVO!"
+        this.mensaje = this.mensaje + " SON EQUIVOCADAS, REVISALAS DE NUEVO!";
       }
-      if (this.mensaje == "LAS RESPUESTAS A LAS PREGUNTAS: ") {
+      if (
+        this.mensaje ==
+        "LAS RESPUESTAS A LAS PREGUNTAS: " +
+          " SON EQUIVOCADAS, REVISALAS DE NUEVO!"
+      ) {
         this.mensaje = "TODAS LAS RESPUESTAS CORRECTAS";
       }
-      this.enviar(this.mensaje);
     },
     dmensaje(valor, posicion) {
+      console.log()
       this.Rrespuestas[posicion] = valor;
-      this.verificacion(this.Rrespuestas, this.rEsperadas);
+      this.verificacion(this.Rrespuestas, this.object.rEsperadas);
     },
     playSound(sound) {
       if (sound) {
         var audio = new Audio(sound);
         audio.play();
       }
+    },
+    incompleta() {
+      console.log(this.object);
+      console.log(this.object.options)
+      for (var item in this.object.options) {
+        
+        if (this.object.options[item].respuesta == "") {
+          return true;
+        }
+      }
+      return false;
     },
   },
 };
@@ -89,7 +134,7 @@ export default {
 /deep/.labelPregunta {
   font-weight: bold;
 }
-.btn{
+#play {
   margin-top: 1em;
   border-radius: 2em;
   height: 2em;

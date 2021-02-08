@@ -202,6 +202,19 @@
         <audioComp :elemento="elementoTextP16" />
       </b-col>
     </b-row>
+    <b-row>
+      <b-col>
+        <h3 class="subTitulo">QUESTIONS</h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col>
+        <opcionMultiple
+          :object="oMultipleP16"          
+        />
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -221,6 +234,46 @@ export default {
   },
   data() {
     return {
+      oMultipleP16: {
+        rEsperadas:["B", "A", "C", "B"],
+        options:[
+        {
+          respuesta:"",
+          pregunta: "1.	What was my mum wearing when she came into my room?",
+          options: [
+            {text: "A strange dress", value: "A"},
+            {text: "A chicken costume", value: "B"},
+            {text: "A funny way",value: "C"},
+          ],
+        },
+        {
+          respuesta:"",
+          pregunta: "2.	What did Ronaldo offer to buy me?",
+          options: [
+            {text: "A new pair of flip flops", value: "A"},
+            {text: "My shopping", value: "B"},
+            {text: "A football",value: "C"},
+          ],
+        },
+        {
+          respuesta:"",
+          pregunta: "3.	How much money did I find?",
+          options: [
+            {text: "Twenty dollars", value: "A"},
+            {text: "Twenty thousand dollars", value: "B"},
+            {text: "Two hundred dollars",value: "C"},
+          ],
+        },
+        {
+          respuesta:"",
+          pregunta: "4.	What did I shout when I got home?",
+          options: [
+            {text: "I ran inside", value: "A"},
+            {text: "Mom, today was the best day ever", value: "B"},
+            {text: "About my day",value: "C"},
+          ],
+        },
+      ]},
       elementoTextP16: {
         audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E2P1.mp3",
         textoD:
