@@ -78,9 +78,6 @@ export default {
       this.$refs[text].show();
     },
     verificacion: function (respuestas, rEsperadas) {
-      if(this.incompleta()){
-        console.log("incompleta")
-      }
       this.mensaje = "LAS RESPUESTAS A LAS PREGUNTAS: ";
       if (respuestas.length != rEsperadas.length) {
         this.mensaje = "DILIGENCIE TODAS LAS PREGUNTAS.";
@@ -105,7 +102,6 @@ export default {
       }
     },
     dmensaje(valor, posicion) {
-      console.log()
       this.Rrespuestas[posicion] = valor;
       this.verificacion(this.Rrespuestas, this.object.rEsperadas);
     },
@@ -114,17 +110,6 @@ export default {
         var audio = new Audio(sound);
         audio.play();
       }
-    },
-    incompleta() {
-      console.log(this.object);
-      console.log(this.object.options)
-      for (var item in this.object.options) {
-        
-        if (this.object.options[item].respuesta == "") {
-          return true;
-        }
-      }
-      return false;
     },
   },
 };
