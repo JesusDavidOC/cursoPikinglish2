@@ -44,7 +44,7 @@
       </h3>
     </b-modal>
     <b-row>
-      <b-col></b-col>
+      <b-col sm="1"></b-col>
       <b-col sm="auto">
         <b-button
           variant="primary"
