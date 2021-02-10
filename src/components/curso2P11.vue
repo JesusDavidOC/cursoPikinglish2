@@ -172,14 +172,15 @@
             </h4>
           </b-row>
           <b-row> </b-row>
-          <inputChecked
-            :esperado="item.esperado"
-            :tamano="item.tamano"
-            :conTexto="true"
-            :textoA="item.textoA"
-            :textoD="item.textoD"
-            :textoD2="item.textoD2"
-          />
+            <inputChecked
+              :esperado="item.esperado"
+              :tamano="item.tamano-1"
+              :conTexto="true"
+              :textoA="item.textoA"
+              :textoD="item.textoD"
+              :textoD2="item.textoD2"
+            />
+          
         </b-row>
       </b-col>
     </b-row>
@@ -210,9 +211,20 @@
     <b-row>
       <b-col sm="1"></b-col>
       <b-col>
-        <opcionMultiple
-          :object="oMultipleP16"          
-        />
+        <opcionMultiple :object="oMultipleP16" />
+      </b-col>
+    </b-row>
+
+    <b-row class="diamondContainer">
+      <b-col sm="auto"><i class="fa fa-diamond fuenteDiamond"></i></b-col>
+      <b-col>
+        <h3 class="fuenteDiamond">Complete the phrase, listen and complete</h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col sm="1"></b-col>
+      <b-col sm="10">
+        <tablaTC id="tabla1P17" :cuestionario="tabla1P17" />
       </b-col>
     </b-row>
   </b-container>
@@ -234,46 +246,342 @@ export default {
   },
   data() {
     return {
+      tabla1P17: {
+        fields: [
+          { key: "a", thClass: "noHead" },
+          { key: "complejo1", thClass: "noHead" },
+        ],
+        items: [
+          {
+            a: "Desayuné con ellos",
+            complejo1: {
+              lista: ["took"],
+              textoA: "I",
+              textoD: "breakfast with them",
+              tamano: 20,
+            },
+          },
+          {
+            a: "Dejé la Puerta abierta",
+            complejo1: {
+              lista: ["left"],
+              textoA: "I",
+              textoD: "the door open",
+              tamano: 15.5,
+            },
+          },
+          {
+            a: "Escribí mi nombre en la pared",
+            complejo1: {
+              lista: ["wrote"],
+              textoA: "I",
+              textoD: "my name on the wall",
+              tamano: 21,
+            },
+          },
+          {
+            a: "La vi bailando",
+            complejo1: {
+              lista: ["saw"],
+              textoA: "I",
+              textoD: "her dancing",
+              tamano: 14.3,
+            },
+          },
+          {
+            a: "Lo hiciste bien",
+            complejo1: {
+              lista: ["did"],
+              textoA: "You",
+              textoD: "it well",
+              tamano: 12,
+            },
+          },
+          {
+            a: "Salí con el",
+            complejo1: {
+              lista: ["went"],
+              textoA: "I",
+              textoD: "out with him ",
+              tamano: 15,
+            },
+          },
+          {
+            a: "Ellos nos llevaron allá",
+            complejo1: {
+              lista: ["took"],
+              textoA: "They",
+              textoD: "us there ",
+              tamano: 15,
+            },
+          },
+          {
+            a: "Nadie me contó",
+            complejo1: {
+              lista: ["found"],
+              textoA: "Nobody",
+              textoD: "me",
+              tamano: 13.7,
+            },
+          },
+          {
+            a: "Todos sabían de ello",
+            complejo1: {
+              lista: ["knew"],
+              textoA: "Everybody",
+              textoD: "about it",
+              tamano: 19,
+            },
+          },
+          {
+            a: "Nosotros sostuvimos la fiesta en la escuela",
+            complejo1: {
+              lista: ["held"],
+              textoA: "We",
+              textoD: "the party at the school ",
+              tamano: 23.3,
+            },
+          },
+          {
+            a: "Pensé que sería difícil ",
+            complejo1: {
+              lista: ["thought"],
+              textoA: "I",
+              textoD: "it would be hard",
+              tamano: 19,
+            },
+          },
+          {
+            a: "Compré un par de medias",
+            complejo1: {
+              lista: ["bought"],
+              textoA: "I",
+              textoD: "a pair of socks",
+              tamano: 18,
+            },
+          },
+          {
+            a: "Entendimos perfectamente",
+            complejo1: {
+              lista: ["understood"],
+              textoA: "We",
+              textoD: "perfectly ",
+              tamano: 18,
+            },
+          },
+          {
+            a: "Todos nosotros dormimos bien",
+            complejo1: {
+              lista: ["slept"],
+              textoA: "We all",
+              textoD: "very well",
+              tamano: 16.5,
+            },
+          },
+          {
+            a: "Me sentí un poco extraño",
+            complejo1: {
+              lista: ["felt"],
+              textoA: "I",
+              textoD: "a bit weird",
+              tamano: 13,
+            },
+          },
+          {
+            a: "Nos conocimos hace mucho tiempo",
+            complejo1: {
+              lista: ["met"],
+              textoA: "We",
+              textoD: "a very long time ago",
+              tamano: 22,
+            },
+          },
+          {
+            a: "Le vendi mi carro a él",
+            complejo1: {
+              lista: ["selt"],
+              textoA: "I",
+              textoD: "him my car",
+              tamano: 14,
+            },
+          },
+          {
+            a: "Ellos me enviaron una tarjeta",
+            complejo1: {
+              lista: ["sent"],
+              textoA: "They",
+              textoD: "me a post card",
+              tamano: 19.5,
+            },
+          },
+          {
+            a: "Ella me prestó algo de dinero",
+            complejo1: {
+              lista: ["lent"],
+              textoA: "I",
+              textoD: "me some money",
+              tamano: 17.5,
+            },
+          },
+          {
+            a: "Nunca he enseñado",
+            complejo1: {
+              lista: ["taught"],
+              textoA: "I have never",
+              tamano: 16,
+            },
+          },
+          {
+            a: "No he colgado el cuadro aún",
+            complejo1: {
+              lista: ["hung"],
+              textoA: "I haven’t",
+              textoD: "the painting yet",
+              tamano: 23,
+            },
+          },
+          {
+            a: "Ella me lanzó el balón",
+            complejo1: {
+              lista: ["threw"],
+              textoA: "She",
+              textoD: "the ball to me",
+              tamano: 19,
+            },
+          },
+          {
+            a: "Ella habló con la policía",
+            complejo1: {
+              lista: ["spoke"],
+              textoA: "she",
+              textoD: "to the police",
+              tamano: 17.7,
+            },
+          },
+          {
+            a: "Ellos me dieron esto",
+            complejo1: {
+              lista: ["gave"],
+              textoA: "They",
+              textoD: "me this",
+              tamano: 15,
+            },
+          },
+          {
+            a: "He tenido un gran día",
+            complejo1: {
+              lista: ["got"],
+              textoA: "I have",
+              textoD: "a great day",
+              tamano: 17.2,
+            },
+          },
+          {
+            a: "Atrapé un resfriado",
+            complejo1: {
+              lista: ["caught"],
+              textoA: "I",
+              textoD: "a cold",
+              tamano: 12,
+            },
+          },
+          {
+            a: "Nadie ha traído nada",
+            complejo1: {
+              lista: ["brought"],
+              textoA: "Nobody has",
+              textoD: "anything",
+              tamano: 22,
+            },
+          },
+          {
+            a: "Ella finalmente me perdonó",
+            complejo1: {
+              lista: ["finally"],
+              textoA: "She",
+              textoD: "forgave me",
+              tamano: 17.5,
+            },
+          },
+          {
+            a: "He conducido durante 5 horas",
+            complejo1: {
+              lista: ["drove"],
+              textoA: "I have",
+              textoD: "for 5 hours",
+              tamano: 18.5,
+            },
+          },
+          {
+            a: "Encendí una vela",
+            complejo1: {
+              lista: ["lit"],
+              textoA: "I",
+              textoD: "a candle",
+              tamano: 11,
+            },
+          },
+          {
+            a: "He volado a España dos veces",
+            complejo1: {
+              lista: ["flew"],
+              textoA: "I have",
+              textoD: "to Spain twice ",
+              tamano: 19.5,
+            },
+          },
+          {
+            a: "Él se volvió profesor",
+            complejo1: {
+              lista: ["became"],
+              textoA: "He",
+              textoD: "a teacher ",
+              tamano: 16.5,
+            },
+          },
+        ],
+      },
       oMultipleP16: {
-        rEsperadas:["B", "A", "C", "B"],
-        options:[
-        {
-          respuesta:"",
-          pregunta: "1.	What was my mum wearing when she came into my room?",
-          options: [
-            {text: "A strange dress", value: "A"},
-            {text: "A chicken costume", value: "B"},
-            {text: "A funny way",value: "C"},
-          ],
-        },
-        {
-          respuesta:"",
-          pregunta: "2.	What did Ronaldo offer to buy me?",
-          options: [
-            {text: "A new pair of flip flops", value: "A"},
-            {text: "My shopping", value: "B"},
-            {text: "A football",value: "C"},
-          ],
-        },
-        {
-          respuesta:"",
-          pregunta: "3.	How much money did I find?",
-          options: [
-            {text: "Twenty dollars", value: "A"},
-            {text: "Twenty thousand dollars", value: "B"},
-            {text: "Two hundred dollars",value: "C"},
-          ],
-        },
-        {
-          respuesta:"",
-          pregunta: "4.	What did I shout when I got home?",
-          options: [
-            {text: "I ran inside", value: "A"},
-            {text: "Mom, today was the best day ever", value: "B"},
-            {text: "About my day",value: "C"},
-          ],
-        },
-      ]},
+        rEsperadas: ["B", "A", "C", "B"],
+        options: [
+          {
+            respuesta: "",
+            pregunta: "1.	What was my mum wearing when she came into my room?",
+            options: [
+              { text: "A strange dress", value: "A" },
+              { text: "A chicken costume", value: "B" },
+              { text: "A funny way", value: "C" },
+            ],
+          },
+          {
+            respuesta: "",
+            pregunta: "2.	What did Ronaldo offer to buy me?",
+            options: [
+              { text: "A new pair of flip flops", value: "A" },
+              { text: "My shopping", value: "B" },
+              { text: "A football", value: "C" },
+            ],
+          },
+          {
+            respuesta: "",
+            pregunta: "3.	How much money did I find?",
+            options: [
+              { text: "Twenty dollars", value: "A" },
+              { text: "Twenty thousand dollars", value: "B" },
+              { text: "Two hundred dollars", value: "C" },
+            ],
+          },
+          {
+            respuesta: "",
+            pregunta: "4.	What did I shout when I got home?",
+            options: [
+              { text: "I ran inside", value: "A" },
+              { text: "Mom, today was the best day ever", value: "B" },
+              { text: "About my day", value: "C" },
+            ],
+          },
+        ],
+      },
       elementoTextP16: {
         audio: "/cursos/curso2/leccion3/audios/page15/audioC2P15E2P1.mp3",
         textoD:

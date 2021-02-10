@@ -50,7 +50,7 @@
               :conTexto="true"
               :textoA="item.textoA"
               :textoD="item.textoD"
-              :tamano="item.tamano"
+              :tamano="(item.tamano-4.3 )"
               :textoD2="item.textoD2"            
           /></b-col>
         </b-row>
